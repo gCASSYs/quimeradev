@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DESCRIÇÃO DO SITE -->
+     <meta name="description" content="A Brillcar Estética Automotiva é especializada em polimento, revitalização de pintura e higienização profissional em São Paulo/Zona Leste. Cuidamos do seu carro com carinho, técnicas seguras e produtos de alta qualidade para devolver brilho, proteção e valorização ao seu veículo. Atendimento confiável, resultados duradouros e atenção a cada detalhe.">
+
+     <!-- PALAVRAS CHAVES -->
+     <meta name="keywords" content="estética automotiva, estética automotiva zona leste, polimento automotivo, polidor zona leste, detailing automotivo, higienização interna, revitalização de pintura, proteção cerâmica, vitrificação automotiva, cristalização, remoção de riscos, alto brilho, carro novo, estética automotiva São Paulo, polimento automotivo São Paulo, estética automotiva zona leste SP, detailing zona leste SP
+      ">
+
+     <!-- AUTOR DO SITE -->
+     <meta name="author" content="Gabriele dos Santos Cassiano">
+
+     <!-- Open Grafh (Compartilhar nas Redes Sociais) -->
+     <meta property="og:title" content="BRILLCAR">
+     <meta property="og:description" content="A Brillcar Estética Automotiva é especializada em polimento, revitalização de pintura e higienização profissional em São Paulo/Zona Leste. Cuidamos do seu carro com carinho, técnicas seguras e produtos de alta qualidade para devolver brilho, proteção e valorização ao seu veículo. Atendimento confiável, resultados duradouros e atenção a cada detalhe.">
+     <meta property="og:image" content="https://">
+     <meta property="og:type" content="website">
+
+     <!-- Link dos Icon para Favicon -->
+     <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png">
+     <link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png">
+     <link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png">
+     <link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-icon-76x76.png">
+     <link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-icon-114x114.png">
+     <link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-icon-120x120.png">
+     <link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-icon-144x144.png">
+     <link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-icon-152x152.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-icon-180x180.png">
+     <link rel="icon" type="image/png" sizes="192x192"  href="assets/icon/android-icon-192x192.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon-96x96.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+     <link rel="manifest" href="assets/icon/manifest.json">
+     <meta name="msapplication-TileColor" content="#d9933d">
+     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+     <meta name="theme-color" content="#d9933d"> 
+
+    <title>BRILLCAR</title>
+    <!-- o reset limpa os estilos do html então caso for colocar estilos, deixe ele em primeiro, pois se não ele limpa -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- ANIMAÇÃO CARROCEL SLICK -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <!-- aplica estilo no html então ele sempre vem por ultimo, caso for aplicar estilos no css, pois se não -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+    
+
+    <main id="inicio">
+
+        <!-- INICIO BANNER -->
+        <section class="hero" style="background-image: url('assets/ImgBanner.jpg'); min-height: 500px; background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="hero__overlay"></div>
+
+  <div class="container hero__conteudo">
+    ﻿
+<header class="topo-pill" id="cabecalhoPrincipal">
+    <div class="topo-pill__esq">
+        <img class="topo-pill__logo" src="assets/logo1.svg" alt="BrillCar">
+    </div>
+
+    <!-- BOTAO ABRIR (so aparece no mobile) -->
+    <button class="abrir-menu" type="button" aria-label="Abrir menu">
+        <img src="assets/abrir.svg" alt="">
+    </button>
+
+    <!-- MENU -->
+    <nav class="topo-pill__menu" aria-label="Menu principal">
+
+        <!-- BOTAO FECHAR (so aparece no mobile) -->
+        <button class="fechar-menu" type="button" aria-label="Fechar menu">
+            <img src="assets/fechar.svg" alt="">
+        </button>
+
+        <!-- LOGIN DENTRO DO MENU (mobile) -->
+        <a class="menu-login" href="#login">
+            <span class="menu-login__icone">
+                <img src="assets/login.svg" alt="">
+            </span>
+            <span class="menu-login__texto">LOGIN</span>
+        </a>
+
+        <a class="menu-ativo" href="index.html">HOME</a>
+        <a class="" href="sobre.html">SOBRE</a>
+
+        <!-- SERVICOS COM SUBMENU -->
+        <div class="menu-item menu-item--dropdown ">
+            <!-- Ajuste de linkagem: o item principal e o submenu passam a usar os arquivos PHP reais da pasta /servicos. -->
+            <a class="menu-link menu-link--drop " href="servicos/servicosTotal.html">
+                SERVIÇOS
+                <span class="seta-drop" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="submenu">
+                <a href="servicos/polimento.html">Polimento</a>
+                <a href="servicos/vitrificacao.html">Vitrificação</a>
+                <a href="servicos/higienizacao.html">Higienização</a>
+                <a href="servicos/cristalizacao.html">Cristalização</a>
+                <a href="servicos/revitalizacao.html">Revitalização</a>
+            </div>
+        </div>
+
+        <a class="" href="orcamentos.html">ORÇAMENTO</a>
+        <a class="" href="contatos.html">CONTATOS</a>
+    </nav>
+
+    <div class="topo-pill__dir">
+        <a class="icone-perfil" href="#login" title="Perfil">
+            <img class="icone-perfil__img" src="assets/login.svg" alt="Login">
+        </a>
+    </div>
+</header>
+
+    <div class="hero__texto">
+      <h1 class="hero__titulo">Excelência em Estética Automotiva</h1>
+
+      <p class="hero__subtitulo">
+        <span class="hero__rotator" aria-live="polite">
+          <span id="heroPalavra" class="hero__palavra">Polimento</span>
+        </span>
+      </p>
+
+      <div class="hero__botoes">
+        <a class="btn" href="orcamentos.html">ORÇAMENTO</a>
+        <a class="btn btn--secundario" href="servicos.html">SERVIÇOS</a>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- FINAL BANNER -->
+
+        <!-- INICIO SOBRE -->
+        <section class="secao" id="sobre">
+  <div class="container sobre">
+    <div class="sobre__imagem">
+      <div class="imagem-quadro" style="background-image:url('assets/SobreImg.png');"></div>
+    </div>
+
+    <div class="sobre__texto">
+      <h2 class="titulo">BrillCar</h2>
+      <h3 class="subtitulo-destaque">O Brilho que Valoriza Seu Carro</h3>
+
+      <p class="texto">
+        A BrillCar Estética Automotiva nasceu para transformar veículos comuns em experiências cuidadas de verdade.
+        Nosso objetivo é devolver brilho, proteção e valorização com um processo profissional.
+      </p>
+
+      <div class="lista-icones">
+        <div class="item-icone">
+          <span class="bolinha-icone">
+            <img src="assets/icon1-sobre.svg" alt="Técnica segura">
+          </span>
+          <p class="texto">Com métodos testados, polimento técnico e higienização profunda, a BrillCar oferece um nível de cuidado que vai além do visual.</p>
+        </div>
+
+        <div class="item-icone">
+          <span class="bolinha-icone">
+            <img src="assets/icon2-sobre.svg" alt="Técnica segura">
+          </span>
+          <p class="texto">Nada de material genérico ou produtos agressivos. Utilizamos compostos e protetivos aprovados pelo mercado, garantindo durabilidade, brilho e proteção real para seu carro.</p>
+        </div>
+
+        <div class="item-icone">
+          <span class="bolinha-icone">
+            <img src="assets/icon3-sobre.svg" alt="Técnica segura">
+          </span>
+          <p class="texto">Aqui você não é só mais um cliente. Avaliamos seu veículo, entendemos seus objetivos e indicamos o que realmente faz sentido. A BrillCar entrega transparência, respeito e serviço de alto nível.</p>
+        </div>
+
+        <div class="item-icone">
+          <span class="bolinha-icone">
+            <img src="assets/icon4-sobre.svg" alt="Técnica segura">
+          </span>
+          <p class="texto">Nossa equipe atende com experiência e paixão, oferecendo resultados consistentes. A BrillCar tem orgulho de conquistar clientes que voltam e recomendam, porque confiam no que entregamos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>        <!-- FINAL SOBRE -->
+
+        <!-- INICIO SERVICOS -->
+        ﻿
+<section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
+  <div class="container faixa-parallax__conteudo">
+    <h2 class="faixa-parallax__titulo">SERVIÇOS</h2>
+    <p class="faixa-parallax__texto">Mais que limpeza: desempenho, cuidado e valorização do seu visual.</p>
+  </div>
+</section>
+
+<section class="secao" id="servicos">
+  <div class="container">
+    <div class="grade-servicos">
+      <!-- Ajuste de linkagem: os cards agora usam as páginas PHP reais da pasta /servicos. -->
+      <a class="servico" href="servicos/cristalizacao.html"><div class="servico__foto"><img src="assets/cristalização.png" alt="Cristalização"></div><h4 class="servico__nome">Cristalização</h4></a>
+      <a class="servico" href="servicos/revitalizacao.html"><div class="servico__foto"><img src="assets/revitalização.jpg" alt="Revitalização"></div><h4 class="servico__nome">Revitalização</h4></a>
+      <a class="servico" href="servicos/higienizacao.html"><div class="servico__foto"><img src="assets/higienização.png" alt="Higienização"></div><h4 class="servico__nome">Higienização</h4></a>
+      <a class="servico" href="servicos/vitrificacao.html"><div class="servico__foto"><img src="assets/vitrificação.jpg" alt="Vitrificação"></div><h4 class="servico__nome">Vitrificação</h4></a>
+      <a class="servico" href="servicos/polimento.html"><div class="servico__foto"><img src="assets/polimento.png" alt="Polimento"></div><h4 class="servico__nome">Polimento</h4></a>
+    </div>
+
+    <div class="centralizar">
+      <a class="btn" href="orcamentos.html">ORÇAMENTO</a>
+    </div>
+  </div>
+</section>
+        <!-- FINAL SERVICOS -->
+
+        <!-- INICIO PACOTES -->
+        ﻿
+<section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
+  <div class="container faixa-parallax__conteudo">
+    <h2 class="faixa-parallax__titulo">PACOTES</h2>
+    <p class="faixa-parallax__texto">Seu carro merece o melhor: pacotes completos com boas soluções.</p>
+  </div>
+</section>
+
+<section class="secao" id="pacotes">
+  <div class="container">
+    <div class="grade-pacotes">
+      <article class="pacote"><h3 class="pacote__titulo">POLIMENTO</h3><p class="pacote__linha">Básico: limpeza e brilho</p><p class="pacote__preco">R$ 450,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+      <article class="pacote"><h3 class="pacote__titulo">CRISTALIZAÇÃO</h3><p class="pacote__linha">Ganho: proteção técnica</p><p class="pacote__preco">R$ 600,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+      <article class="pacote"><h3 class="pacote__titulo">HIGIENIZAÇÃO</h3><p class="pacote__linha">Cuidado interno e odores</p><p class="pacote__preco">R$ 450,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+      <article class="pacote"><h3 class="pacote__titulo">VITRIFICAÇÃO</h3><p class="pacote__linha">Alta durabilidade</p><p class="pacote__preco">R$ 1.200,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+      <article class="pacote"><h3 class="pacote__titulo">REVITALIZAÇÃO</h3><p class="pacote__linha">Renova cor e brilho</p><p class="pacote__preco">R$ 700,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+      <article class="pacote"><h3 class="pacote__titulo">COMPLETO</h3><p class="pacote__linha">Pacote total BrillCar</p><p class="pacote__preco">R$ 1.650,00</p><a class="btn btn--pequeno" href="orcamentos.html">ADQUIRIR</a></article>
+    </div>
+  </div>
+</section>
+        <!-- FINAL PACOTES -->
+
+        <!-- INICIO DIFERENCIAIS -->
+        <section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
+  <div class="container faixa-parallax__conteudo">
+    <h2 class="faixa-parallax__titulo">DIFERENCIAIS</h2>
+    <p class="faixa-parallax__texto">O que nos torna diferentes.</p>
+  </div>
+</section>
+
+<section class="secao" id="diferenciais">
+  <div class="container">
+    <div class="grade-diferenciais">
+
+      <article class="diferencial diferencial--grande">
+        <img class="diferencial__foto" src="assets/ambiente.png" alt="Ambiente premium" />
+        <span class="tag">AMBIENTE PREMIUM</span>
+
+        <div class="diferencial__conteudo">
+          <h3 class="diferencial__titulo">Conforto enquanto seu carro brilha!</h3>
+          <p class="diferencial__texto">Café, Wi-Fi e experiência completa.</p>
+        </div>
+      </article>
+
+      <article class="diferencial diferencial--flip">
+        <div class="flip">
+          <div class="flip__face flip__front">
+            <span class="tag">FAMÍLIA</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/urso.png" alt="Icone do Card Diferencial">
+                <img src="assets/pet.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <h3 class="diferencial__titulo">Espaço Kids & Pet Friendly</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip__face flip__back">
+            <span class="tag">FAMÍLIA</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/urso.png" alt="Icone do Card Diferencial">
+                <img src="assets/pet.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <p class="diferencial__texto">Ambiente preparado para sua família: espaço kids e pet friendly para esperar com conforto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="diferencial diferencial--flip">
+        <div class="flip">
+          <div class="flip__face flip__front">
+            <span class="tag">MAIS PEDIDO</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/cafe.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <h3 class="diferencial__titulo">Sala de espera com Café</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip__face flip__back">
+            <span class="tag">MAIS PEDIDO</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/cafe.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <p class="diferencial__texto">Espaço confortável com café para acompanhar o atendimento com tranquilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="diferencial diferencial--flip">
+        <div class="flip">
+          <div class="flip__face flip__front">
+            <span class="tag">PRO</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/lupa.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <h3 class="diferencial__titulo">Inspeção com iluminação técnica</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip__face flip__back">
+            <span class="tag">PRO</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/lupa.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <p class="diferencial__texto">Identificação precisa de riscos e marcas para definir o melhor procedimento no seu carro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="diferencial diferencial--flip">
+        <div class="flip">
+          <div class="flip__face flip__front">
+            <span class="tag">TRANSPARÊNCIA</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/lista.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <h3 class="diferencial__titulo">Checklist + Garantia</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip__face flip__back">
+            <span class="tag">TRANSPARÊNCIA</span>
+            <div class="diferencial__linha">
+              <div class="diferencial__icones">
+                <img src="assets/lista.png" alt="Icone do Card Diferencial">
+              </div>
+              <div class="diferencial__info">
+                <p class="diferencial__texto">Você recebe um checklist do processo e garantia do serviço contratado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>        <!-- FINAL DIFERENCIAIS -->
+
+        <!-- INICIO PARCEIROS -->
+        ﻿
+<section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
+  <div class="container faixa-parallax__conteudo">
+    <h2 class="faixa-parallax__titulo">PARCEIROS</h2>
+    <p class="faixa-parallax__texto">Parceiros que elevam o padrão BrillCar</p>
+  </div>
+</section>
+
+<section class="secao" id="parceiros" aria-label="Parceiros da BrillCar">
+  <div class="container">
+    <div class="parceiros">
+      <div class="parceiros__track">
+        <div class="parceiros__logo"><img src="assets/Michelin.png" alt="Logo da Michelin" loading="lazy"></div>
+        <div class="parceiros__logo"><img src="assets/Continenta.png" alt="Logo da Continental" loading="lazy"></div>
+        <div class="parceiros__logo"><img src="assets/3M.png" alt="Logo da 3M" loading="lazy"></div>
+        <div class="parceiros__logo"><img src="assets/chemicalguys.png" alt="Logo da Chemical Guys" loading="lazy"></div>
+        <div class="parceiros__logo"><img src="assets/vonixx.png" alt="Logo da Vonixx" loading="lazy"></div>
+        <div class="parceiros__logo"><img src="assets/movida-semi-novos.png" alt="Logo da Movida Seminovos" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- FINAL PARCEIROS -->
+
+
+        <!-- INICIO AVALIACAO -->
+        <section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
+  <div class="container faixa-parallax__conteudo">
+    <h2 class="faixa-parallax__titulo">AVALIAÇÃO</h2>
+    <p class="faixa-parallax__texto">Juntos garantimos o melhor cuidado para o seu veículo</p>
+  </div>
+</section>
+
+<section class="secao" id="avaliacao">
+  <div class="container">
+    <div class="avaliacao__carrossel">
+
+      <div class="avaliacao__slide">
+        <div class="painel-avaliacao">
+          <div class="painel-avaliacao__estrelas">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da AvalIAÇÃO">
+          </div>
+
+          <div class="painel-avaliacao__numeros">
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">8</div>
+              <div class="caixa-numero__texto">AVALIAÇÕES<br>REALIZADAS</div>
+            </div>
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">8</div>
+              <div class="caixa-numero__texto">SERVIÇOS<br>PRESTADOS</div>
+            </div>
+          </div>
+
+          <p class="painel-avaliacao__frase">“Fiz higienização interna e o resultado foi excelente. Cheiro agradável, bancos bem limpos e acabamento bem profissional. Voltarei com certeza.”</p>
+        </div>
+
+        <div class="cartao-depoimento">
+          <div class="cartao-depoimento__foto">
+            <img src="assets/Rafael.png" alt="Foto do Usuario">
+          </div>
+          <div class="cartao-depoimento__nome">Rafael Henrique Santos Lima</div>
+        </div>
+      </div>
+
+      <div class="avaliacao__slide">
+        <div class="painel-avaliacao">
+          <div class="painel-avaliacao__estrelas">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da AvalIAÇÃO">
+          </div>
+
+          <div class="painel-avaliacao__numeros">
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">14</div>
+              <div class="caixa-numero__texto">AVALIAÇÕES<br>REALIZADAS</div>
+            </div>
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">12</div>
+              <div class="caixa-numero__texto">SERVIÇOS<br>PRESTADOS</div>
+            </div>
+          </div>
+
+          <p class="painel-avaliacao__frase">“Fiz o polimento e fiquei impressionado com o brilho. Atendimento pontual, explicaram cada etapa e o resultado ficou acima do esperado. Recomendo demais.”</p>
+        </div>
+
+        <div class="cartao-depoimento">
+          <div class="cartao-depoimento__foto">
+            <img src="assets/bruno.png" alt="Foto do Usuario">
+          </div>
+          <div class="cartao-depoimento__nome">Bruno Almeida Ferreira</div>
+        </div>
+      </div>
+
+      <div class="avaliacao__slide">
+        <div class="painel-avaliacao">
+          <div class="painel-avaliacao__estrelas">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da AvalIAÇÃO">
+          </div>
+
+          <div class="painel-avaliacao__numeros">
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">23</div>
+              <div class="caixa-numero__texto">AVALIAÇÕES<br>REALIZADAS</div>
+            </div>
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">19</div>
+              <div class="caixa-numero__texto">SERVIÇOS<br>PRESTADOS</div>
+            </div>
+          </div>
+
+          <p class="painel-avaliacao__frase">“Levei o carro para vitrificação e a diferença na pintura é nítida. Acabamento muito caprichado e cuidado com cada detalhe. Valeu cada centavo.”</p>
+        </div>
+
+        <div class="cartao-depoimento">
+          <div class="cartao-depoimento__foto">
+            <img src="assets/camila.png" alt="Foto do Usuario">
+          </div>
+          <div class="cartao-depoimento__nome">Camila Rodrigues Santos</div>
+        </div>
+      </div>
+
+      <div class="avaliacao__slide">
+        <div class="painel-avaliacao">
+          <div class="painel-avaliacao__estrelas">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da Avaliação">
+            <img src="assets/estrela.svg" alt="Estrelas da AvalIAÇÃO">
+          </div>
+
+          <div class="painel-avaliacao__numeros">
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">33</div>
+              <div class="caixa-numero__texto">AVALIAÇÕES<br>REALIZADAS</div>
+            </div>
+            <div class="caixa-numero">
+              <div class="caixa-numero__topo">28</div>
+              <div class="caixa-numero__texto">SERVIÇOS<br>PRESTADOS</div>
+            </div>
+          </div>
+
+          <p class="painel-avaliacao__frase">“A higienização interna ficou perfeita: sem cheiro forte, estofados bem limpos e painel impecável. Serviço rápido e com muita atenção. Vou voltar com certeza.”</p>
+        </div>
+
+        <div class="cartao-depoimento">
+          <div class="cartao-depoimento__foto">
+            <img src="assets/juliana.png" alt="Foto do Usuario">
+          </div>
+          <div class="cartao-depoimento__nome">Juliana Pereira Costa</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>        <!-- FINAL AVALIACAO -->
+
+        <!-- INICIO FAQ -->
+        <section class="secao" id="faq" aria-labelledby="faq-titulo">
+  <div class="container">
+    <h2 class="faq-titulo" id="faq-titulo">FAQ</h2>
+
+    <div class="faq-layout">
+      <div class="faq-imagem">
+        <img src="assets/img-faq.png" alt="Ilustração da seção de perguntas frequentes" loading="lazy">
+        <a class="faq-botao-orcamento" href="#orcamentos">ORÇAMENTO</a>
+      </div>
+
+      <div class="faq-conteudo">
+        <h3 class="faq-subtitulo">FOCO EM SOLUÇÃO</h3>
+        <p class="faq-descricao">
+          Tudo o que você precisa saber para entender nossos processos, resultados e qual serviço escolher para seu carro.
+        </p>
+
+        <div class="faq-box-pergunta">
+          <details class="faq-item">
+            <summary class="faq-pergunta">Qual serviço é ideal para o estado atual do meu carro?</summary>
+            <div class="faq-resposta">
+              <p class="texto">Depende de como está a pintura e o interior do seu veículo.
+              Na nossa estética, avaliamos o carro junto com você e indicamos a melhor solução</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-pergunta">Quanto tempo duram os resultados dos serviços de proteção de pintura?</summary>
+            <div class="faq-resposta">
+              <p class="texto">A durabilidade varia conforme o uso do carro e os cuidados do dia a dia, mas em média:<br>
+              Polimento: de 4 a 6 meses de bom brilho, com lavagem correta.<br>
+              Cristalização: de 6 a 12 meses de proteção e realce da cor.<br>
+              Vitrificação: pode durar de 2 a 3 anos, com excelente proteção e facilidade na lavagem.<br>
+              Nossa equipe também orienta você sobre os melhores cuidados após o serviço, para que o resultado dure o máximo possível.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-pergunta">Os produtos usados podem danificar a pintura ou o interior do veículo?</summary>
+            <div class="faq-resposta">
+              <p class="texto">Não. Trabalhamos com produtos profissionais e técnica correta para cada material.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-pergunta">Qual a diferença entre fazer os serviços aqui e em um lava-rápido comum?</summary>
+            <div class="faq-resposta">
+              <p class="texto">Aqui o foco não é só “deixar limpo”, mas valorizar o veículo, proteger a pintura e conservar o interior.<br>
+              Isso gera mais confiança, valorização do carro e um resultado que realmente faz diferença no dia a dia.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        <!-- FINAL FAQ -->
+
+    </main>
+
+  <!-- INICIO RODAPE -->
+  ﻿
+<footer class="rodape" id="contato">
+  <div class="container rodape__conteudo">
+    <div class="rodape__coluna">
+      <div class="rodape__logo"><img src="assets/LogoInteira.png" alt="Logo Inteira da Estética BrillCar"></div>
+      <p class="rodape__texto">Cuidado, excelência e valorização<br>em cada detalhe</p>
+      <div class="rodape__redes" aria-label="Redes sociais da BrillCar">
+              </div>
+    </div>
+
+    <nav class="rodape__coluna" aria-label="Menu do rodapé">
+      <h4 class="rodape__titulo">MENU</h4>
+      <a class="rodape__link" href="#inicio">Home</a>
+      <a class="rodape__link" href="#sobre">Sobre</a>
+      <a class="rodape__link" href="#servicos">Serviços</a>
+      <a class="rodape__link" href="orcamentos.html">Orçamento</a>
+      <a class="rodape__link" href="contatos.html">Contato</a>
+    </nav>
+
+    <nav class="rodape__coluna" aria-label="Serviços da BrillCar">
+      <h4 class="rodape__titulo">SERVIÇOS</h4>
+      <!-- Ajuste de linkagem: o rodapé passa a reaproveitar as páginas individuais da seção de serviços. -->
+      <a class="rodape__link" href="servicos/polimento.html">Polimento</a>
+      <a class="rodape__link" href="servicos/cristalizacao.html">Cristalização</a>
+      <a class="rodape__link" href="servicos/higienizacao.html">Higienização</a>
+      <a class="rodape__link" href="servicos/vitrificacao.html">Vitrificação</a>
+      <a class="rodape__link" href="servicos/revitalizacao.html">Revitalização</a>
+    </nav>
+
+    <div class="rodape__mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0254648877017!2d-46.43443166057781!3d-23.495592259266648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63dda7be6fb9%3A0xa74e7d5a53104311!2sSenac%20S%C3%A3o%20Miguel%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1765397149603!5m2!1spt-BR!2sbr" title="Mapa de localização da BrillCar" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="rodape__contato"><div>Av. Marechal Tito, 6000</div><div>(11)9999-9999</div></div>
+  <a class="whats-flutuante" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/whatsapp-24.png" alt="Whatsapp da BrillCar"></a>
+  <div class="rodape__final">© 2026 - Criado e desenvolvido por Gabriele dos Santos Cassiano</div>
+</footer>
+  <!-- FINAL RODAPE -->
+
+    
+    <!-- JQUARY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- É para a animação do carrocel do SLICK => Banner -->
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        /* ============================================================
+            PALAVRA ROTATIVA NO HERO
+            - Troca uma palavra de cada vez no subtítulo
+            - Faz animação de saída/entrada usando classes CSS
+        ============================================================ */
+
+        // 1) Lista com as 5 palavras que vão aparecer no banner (em loop)
+        const palavras = [
+            "POLIMENTO",
+            "VITRIFICAÇÃO",
+            "HIGIENIZAÇÃO",
+            "CRISTALIZAÇÃO",
+            "REVITALIZAÇÃO"
+        ];
+
+        // 2) Pega o elemento do HTML onde a palavra aparece
+        //    (é o <span id="heroPalavra">...</span>)
+        const el = document.getElementById("heroPalavra");
+
+        // 3) Índice que controla qual palavra está sendo mostrada
+        //    começa em 0 (Polimento)
+        let i = 0;
+
+        // 4) Função que troca a palavra com animação
+        function trocarPalavra() {
+
+            // 4.1) Coloca a classe "saindo" para animar sumindo
+            el.classList.add("saindo");
+
+            // 4.2) Espera o tempo da animação de saída (0.35s = 350ms)
+            setTimeout(() => {
+
+            // 4.3) Atualiza o índice (vai para a próxima palavra)
+            //      quando chega na última, volta para a primeira (loop)
+            i = (i + 1) % palavras.length;
+
+            // 4.4) Troca o texto mostrado na tela
+            el.textContent = palavras[i];
+
+            // 4.5) Remove a classe "saindo" e adiciona "entrando"
+            //      para animar aparecendo
+            el.classList.remove("saindo");
+            el.classList.add("entrando");
+
+            // 4.6) Depois que terminou de entrar, remove a classe
+            //      para não ficar travada
+            setTimeout(() => el.classList.remove("entrando"), 350);
+
+            }, 350);
+        }
+
+        // 5) Chama a função a cada X tempo (1600ms = 1.6s)
+        //    você pode aumentar para ficar mais lento (ex: 2200)
+        setInterval(trocarPalavra, 3000);
+    </script>               
+
+
+    <!-- MEU SCRIPT (ANIMAÇÃO) -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
