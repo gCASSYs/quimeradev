@@ -1,0 +1,12 @@
+/* Ajustes QuimeraDev: responsivo das demonstrações */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:768px){img{max-width:100%}}
+@media (max-width:860px){
+  .grade-pacotes{width:100%!important;max-width:520px;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width:560px){
+  .grade-pacotes{grid-template-columns:1fr!important;max-width:340px}
+  .topo-pill__menu{right:0!important;transform:translateX(110%);visibility:hidden;transition:transform .35s ease,visibility 0s linear .35s}
+  html.menu-mobile .topo-pill__menu{transform:none;visibility:visible;transition:transform .35s ease}
+}

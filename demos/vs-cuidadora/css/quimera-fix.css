@@ -1,0 +1,27 @@
+/* Ajustes QuimeraDev: responsivo das demonstrações */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:768px){img{max-width:100%}}
+@media (max-width:768px){
+  .topo > .padrao{min-height:72px;gap:12px;padding-top:8px;padding-bottom:8px}
+  .topo h1{width:150px;height:60px;flex:none}
+  .menu{right:0!important;transform:translateX(110%);visibility:hidden;transition:transform .45s ease,visibility 0s linear .45s;width:min(78vw,300px)!important;max-width:none!important}
+  .menu-mobile .menu{transform:none;visibility:visible;transition:transform .45s ease}
+  .menu .contato{position:static!important;margin:0 auto 24px;transform:none!important}
+  .banner h2,.banner h1{font-size:clamp(32px,9vw,44px)!important;line-height:1.08!important}
+  .banner p{font-size:16px!important}
+  .banner-acoes{display:grid!important;gap:12px;width:100%}
+  .btn-banner{width:100%;text-align:center}
+  .dif-titulo{padding-inline:20px;text-align:center}
+  .dif-titulo h3{font-size:22px!important}
+  .dif-titulo h2{font-size:18px!important;line-height:1.4!important}
+  .dif-cards{padding-inline:4px}
+  .parallax h3{font-size:30px!important;padding-inline:16px}
+  .parallax h2{font-size:22px!important;padding-inline:16px}
+}
+.topo h1{background-image:none!important;background-color:#F1F4E8!important;-webkit-mask:url(../assets/logo_inteira.svg) center/contain no-repeat;mask:url(../assets/logo_inteira.svg) center/contain no-repeat;border-radius:0!important}
+@media (max-width:768px){
+  .dif-cards{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px}
+  .dif-cards article{width:auto!important;max-width:100%!important;margin-inline:0!important;box-sizing:border-box}
+  .for-titulo,.for-titulo img{max-width:100%!important;margin-inline:0!important;left:auto!important;box-sizing:border-box}
+}

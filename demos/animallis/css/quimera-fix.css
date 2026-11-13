@@ -1,0 +1,7 @@
+/* Ajustes QuimeraDev: responsivo das demonstrações */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:768px){img{max-width:100%}}
+@media (max-width:768px){
+  .owl-carousel,.owl-stage-outer{overflow:hidden}
+}

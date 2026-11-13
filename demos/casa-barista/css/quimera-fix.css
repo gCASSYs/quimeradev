@@ -1,0 +1,17 @@
+/* Ajustes QuimeraDev: responsivo das demonstrações */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:768px){img{max-width:100%}}
+@media (max-width:768px){
+  .bem-vindo header p{text-align:left!important;font-size:16px!important;line-height:1.6!important;hyphens:auto}
+  .bem-vindo header h2{font-size:30px!important}
+  .bem-vindo header h3{font-size:20px!important}
+  .menu{right:0!important;transform:translateX(110%);visibility:hidden;transition:transform .5s ease,visibility 0s linear .5s}
+  .menu-mobile .menu{transform:none;visibility:visible;transition:transform .5s ease}
+  p{text-align:left}
+}
+@media (max-width:768px){
+  .bem-vindo article{height:auto!important;min-height:0!important;padding-bottom:24px!important}
+  .bem-vindo article p{text-align:left!important}
+  .coluna-reserva,.box-email,.box-email p{max-width:100%!important;margin-left:0!important;margin-right:0!important;box-sizing:border-box}
+}
