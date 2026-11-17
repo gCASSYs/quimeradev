@@ -1,0 +1,7 @@
+# Bloqueado até a aprovação final (ver PENDENCIAS.md).
+# Ao publicar, troque por:
+#   User-agent: *
+#   Allow: /
+#   Sitemap: https://www.SEUDOMINIO.com.br/sitemap.xml
+User-agent: *
+Disallow: /

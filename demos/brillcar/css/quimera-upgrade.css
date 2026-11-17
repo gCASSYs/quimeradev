@@ -1,0 +1,109 @@
+/* QuimeraDev: camada base de conversão (barra fixa no celular, mensagem do formulário) */
+.q-sticky{display:none}
+@media (max-width:768px){
+  .q-sticky{display:flex;align-items:center;justify-content:center;gap:10px;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;min-height:54px;padding:0 20px;border-radius:16px;background:var(--q-cta,#25D366);color:var(--q-cta-txt,#fff)!important;font:700 16px/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none!important;box-shadow:0 10px 30px rgba(0,0,0,.28);transform:translateY(150%);transition:transform .35s cubic-bezier(.19,1,.22,1)}
+  .q-sticky.on{transform:none}
+  .q-sticky svg{width:22px;height:22px;flex:none}
+  body{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){.q-sticky{transition:none}}
+.q-form-ok{margin:14px 0 0;padding:14px 16px;border-radius:12px;background:#eaf6d6;color:#1f2a0e;font:600 15px/1.45 system-ui,sans-serif}
+
+/* ===== BrillCar: camada de conversão + responsividade ===== */
+:root{--q-cta:#d74e2f;--q-cta-txt:#0e2940}
+.container{width:auto;max-width:1240px;margin-inline:auto;box-sizing:border-box}
+@media (min-width:1025px){.container{padding-inline:32px}}
+
+/* botões: alvo de toque consistente, sem caixa-alta gritante */
+.btn{min-height:50px;padding:8px 26px!important;text-align:center;line-height:1.05;font-size:24px;letter-spacing:.8px;border-radius:999px!important;text-transform:none;gap:8px;text-decoration:none}
+.btn--secundario{background:transparent!important;color:#fff!important;border:2px solid rgba(255,255,255,.75);box-shadow:none;opacity:1}
+.btn--secundario:hover{background:rgba(255,255,255,.1)!important}
+.btn--pequeno{min-height:44px;font-size:20px}
+
+/* HERO */
+.hero{min-height:clamp(600px,92svh,820px)!important;display:flex;flex-direction:column}
+.hero__overlay{background:linear-gradient(90deg,rgba(8,20,32,.88) 0%,rgba(8,20,32,.62) 55%,rgba(8,20,32,.35) 100%)}
+.hero__conteudo{flex:1;display:flex;flex-direction:column;width:100%}
+.hero__texto{margin-top:auto!important;margin-bottom:auto;padding-block:clamp(48px,8vh,96px);max-width:720px}
+.hero__titulo{font-size:clamp(46px,calc(22px + 4.6vw),86px)!important;line-height:1!important;letter-spacing:.5px;margin-bottom:18px!important;text-wrap:balance;padding-block:.06em}
+.q-hero-lead{margin:0 0 20px;max-width:56ch;font-family:var(--fonte-texto);font-size:clamp(16px,calc(14px + .45vw),20px);line-height:1.55;color:rgba(255,255,255,.9)}
+.hero__subtitulo{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 0 26px!important;font-size:16px!important}
+.q-rot-label{font-family:var(--fonte-texto);font-size:15px;color:rgba(255,255,255,.7)}
+.hero__palavra{font-size:20px!important;padding:4px 14px!important;border-radius:999px;background:rgba(217,147,61,.18);border:1px solid rgba(217,147,61,.55);color:#f3c68d!important;font-family:var(--fonte-texto)}
+.hero__botoes{flex-wrap:wrap;gap:12px!important}
+
+/* títulos */
+.titulo{line-height:1.05;padding-block:.06em}
+.subtitulo-destaque{text-transform:none!important}
+
+/* FAIXAS: mais baixas, sem caixa-alta */
+.faixa-parallax{height:auto!important;min-height:0!important;padding-block:clamp(40px,6vw,64px)}
+.faixa-parallax__titulo{font-size:clamp(38px,calc(24px + 2.6vw),56px)!important;text-transform:none;line-height:1.05;padding-block:.06em}
+.faixa-parallax__texto{font-size:clamp(16px,calc(13px + .7vw),22px)!important;line-height:1.45;max-width:46ch;margin-inline:auto!important;text-wrap:balance}
+@media (max-width:1024px){.faixa-parallax{background-attachment:scroll!important}}
+
+/* PACOTES */
+.grade-pacotes{width:100%!important;max-width:920px;box-sizing:border-box}
+.pacote{display:flex;flex-direction:column;align-items:center;padding:24px 18px!important}
+.pacote__titulo{font-size:26px!important}
+.pacote__linha{font-size:14px!important;line-height:1.45}
+.pacote__preco{font-size:28px!important;margin-top:auto!important}
+.pacote .btn.btn--pequeno{width:100%;max-width:240px;padding:0 18px!important}
+@media (max-width:860px){.grade-pacotes{max-width:600px}}
+@media (max-width:560px){.grade-pacotes{max-width:400px}}
+
+/* AVALIAÇÕES: números legíveis e que cabem no celular */
+.caixa-numero__texto{color:rgba(255,255,255,.78)!important;font-size:16px!important;letter-spacing:.6px}
+.caixa-numero__topo{font-size:40px!important}
+@media (max-width:560px){
+  .painel-avaliacao__numeros{gap:12px!important}
+  .caixa-numero{width:auto!important;flex:1 1 0;max-width:150px;height:auto!important;padding:16px 8px;box-sizing:border-box}
+}
+.painel-avaliacao__frase{font-size:16px!important;line-height:1.6}
+
+/* FAQ */
+.faq-titulo{text-transform:none!important;line-height:1.05}
+.faq-subtitulo{text-transform:none!important}
+.faq-pergunta{font-size:15px;line-height:1.4;min-height:44px}
+.faq-botao-orcamento{text-transform:none!important;min-height:46px;display:inline-flex!important;align-items:center;border-radius:999px!important;padding:0 22px!important}
+.faq-imagem img{max-width:100%;height:auto}
+
+/* FAIXA CTA FINAL */
+.q-cta-band{background:linear-gradient(135deg,#0e2940,#14385a);color:#fff;padding:clamp(56px,8vw,96px) max(16px,4vw);text-align:center}
+.q-cta-band>div{max-width:720px;margin:0 auto;display:grid;gap:18px;justify-items:center}
+.q-cta-band h2{margin:0;font-family:var(--fonte-titulo);font-weight:400;font-size:clamp(38px,calc(22px + 3vw),60px);line-height:1.05;color:#d9933d;text-wrap:balance;padding-block:.06em}
+.q-cta-band p{margin:0;font-family:var(--fonte-texto);font-size:clamp(16px,calc(14px + .4vw),19px);line-height:1.6;color:rgba(255,255,255,.86);max-width:52ch}
+.q-cta-acoes{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+
+/* RODAPÉ: mapa vira atalho "Como chegar" (iframes de mapa não carregam na demonstração) */
+.rodape__mapa{min-height:0!important;display:flex}
+.rodape__mapa::after{display:none}
+.q-mapa{display:flex;align-items:center;gap:14px;width:100%;padding:20px;box-sizing:border-box;color:#fff;text-decoration:none;font-family:var(--fonte-texto)}
+.q-mapa svg{width:28px;height:28px;flex:none;color:#d9933d}
+.q-mapa span{display:grid;gap:4px;min-width:0}
+.q-mapa strong{font-size:17px}
+.q-mapa small{font-size:14px;color:rgba(255,255,255,.75);line-height:1.4}
+.q-mapa:hover strong{color:#d9933d}
+
+/* celular: barra fixa substitui o botão flutuante */
+@media (max-width:768px){
+  .whats-flutuante{display:none!important}
+  .hero__texto{padding-block:40px 56px}
+  .hero__botoes .btn{flex:1 1 200px}
+  .btn{font-size:22px}
+}
+.q-sticky{font-family:var(--fonte-texto)!important;font-weight:700}
+@media (max-width:560px){.painel-avaliacao__numeros{flex-direction:row!important;justify-content:center}}
+.rodape__mapa{height:auto!important;align-self:start}
+/* rodada 2: grades das páginas de serviço e menu fora da tela */
+[class*="-grade"]>*,[class*="-etapas"]>*{min-width:0}
+@media (max-width:600px){[class*="-grade--"],[class*="-etapas"]{grid-template-columns:minmax(0,1fr)!important}}
+[class*="-card"],[class*="-beneficio"],[class*="-etapa"]{box-sizing:border-box;max-width:100%}
+@media (max-width:786px){
+  .topo-pill__menu{right:0!important;transform:translateX(110%);visibility:hidden;transition:transform .35s ease,visibility 0s linear .35s}
+  html.menu-mobile .topo-pill__menu{transform:none;visibility:visible;transition:transform .35s ease}
+}
+@media (max-width:786px){
+  .hero__texto{text-align:left!important;margin-inline:0!important}
+  .hero__titulo,.q-hero-lead,.hero__subtitulo{text-align:left!important;justify-content:flex-start!important}
+}

@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blessed Lawn &amp; Garden — Cuidado de gramados, canteiros e reformas de áreas externas</title>
+  <meta name="description" content="A Blessed Lawn & Garden mantém seu gramado verde, seus canteiros limpos e seus fins de semana livres. Manutenção semanal de gramado, instalação de grama em placas, canteiros de flores e transformações completas de áreas externas. Orçamento grátis em 24h.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/urbanist-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-backyard.jpg" as="image">
+
+  <!-- Critical CSS: fonts, tokens, preloader and first paint -->
+  <style>
+    @font-face{font-family:"Urbanist";src:url(assets/fonts/urbanist-var.woff2) format("woff2");font-weight:400 700;font-display:swap}
+    @font-face{font-family:"Inter";src:url(assets/fonts/inter-var.woff2) format("woff2");font-weight:400 600;font-display:swap}
+    :root{--white:#FFFFFF;--paper:#F6F7F1;--sage-50:#EEF4E4;--sage-100:#E0ECD0;--sage-200:#CFE3B8;--green:#2E7D4F;--green-700:#1F5C3F;--forest:#0E2A1E;--ink:#121A15;--muted:#56635A;--font-display:"Urbanist",ui-sans-serif,system-ui,sans-serif;--font-body:"Inter",ui-sans-serif,system-ui,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0}
+    body{background:var(--white);color:var(--ink);font-family:var(--font-body)}
+    .js body.is-loading{overflow:hidden}
+    .preloader{display:none}
+    .js .preloader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:var(--white);transition:opacity .7s cubic-bezier(.22,1,.36,1),visibility .7s,transform .9s cubic-bezier(.22,1,.36,1)}
+    .preloader.is-done{opacity:0;visibility:hidden;transform:translateY(-2%)}
+    .preloader__inner{display:flex;flex-direction:column;align-items:center;gap:28px}
+    .preloader__logo{width:min(300px,70vw);height:auto;overflow:visible;--p:0}
+    .preloader__logo .draw{fill:transparent;stroke:var(--green-700);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--p));transition:fill .5s ease}
+    .preloader__logo .draw--leaf{transition:fill .5s ease .1s}
+    .preloader__logo .word{font-family:var(--font-display);font-weight:700;font-size:30px;letter-spacing:-.5px;fill:transparent;stroke:var(--forest);stroke-width:.8;stroke-dasharray:240;stroke-dashoffset:calc(240 - 240 * var(--p));transition:fill .5s ease}
+    .preloader.is-complete .draw--leaf{fill:var(--sage-200)}
+    .preloader.is-complete .word{fill:var(--forest)}
+    .preloader__count{font-family:var(--font-display);font-weight:700;font-size:clamp(2.5rem,6vw,4rem);line-height:1;color:var(--forest);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+    .preloader__count small{font-size:.45em;color:var(--green);margin-left:2px;vertical-align:top}
+    .preloader__bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--sage-50)}
+    .preloader__bar span{display:block;height:100%;width:100%;background:var(--green);transform-origin:left;transform:scaleX(0)}
+    @media (prefers-reduced-motion:reduce){.js .preloader{transition:opacity .2s}}
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body class="is-loading">
+
+  <!-- ========== SVG SPRITE ========== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="logo-mark" viewBox="0 0 64 64">
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="32" r="29"/><path d="M32 50V28"/>
+        <path d="M32 40c-11 0-17-8-17-18 10 0 17 7 17 18z" fill="var(--leaf, #CFE3B8)"/>
+        <path d="M32 30c0-11 7-17 18-17 0 11-7 17-18 17z" fill="var(--leaf, #CFE3B8)"/>
+        <path d="M21 50h22"/>
+      </g>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" fill="currentColor"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.1L2.6 21.4l4.8-1.3A9.4 9.4 0 1 0 12 2.6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.6 7.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.6 1 1.4 1.8 2.5 2.4.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5 0 .5-.2 1.2-.8 1.6-.6.4-1.5.6-2.6.2-1.5-.5-3-1.5-4.1-2.8-1-1.1-1.8-2.4-1.9-3.4-.1-.9.2-1.6.6-2.1z" fill="currentColor"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-crew" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M18 14.4c1.8.9 3 2.9 3 5.6"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19 13 11"/></g></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.4"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.6 4-2.2 1.4a11 11 0 0 0 5.7 5.7l1.4-2.2 4 1.6V18a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8.5V7c0-.8.5-1.2 1.2-1.2H17V2.6h-2.6C11.7 2.6 10.5 4.3 10.5 7v1.5H8V12h2.5v9.4H14V12h2.6l.4-3.5z" fill="currentColor"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></g></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path d="M21 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.1a4.4 4.4 0 0 1-1.9 2.9v2.4h3.1c1.8-1.7 2.7-4.1 2.7-7zM12 21.5c2.6 0 4.7-.9 6.3-2.3l-3.1-2.4c-.9.6-1.9.9-3.2.9-2.5 0-4.6-1.7-5.3-3.9H3.5v2.5A9.5 9.5 0 0 0 12 21.5zM6.7 13.8a5.6 5.6 0 0 1 0-3.6V7.7H3.5a9.5 9.5 0 0 0 0 8.6zM12 6.3c1.4 0 2.6.5 3.6 1.4l2.7-2.7A9.5 9.5 0 0 0 3.5 7.7l3.2 2.5C7.4 8 9.5 6.3 12 6.3z" fill="currentColor"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.6 4.8 2.2 6.6 7 7.5v1C14.2 11.4 12.6 13.2 12 18h-.1c-.6-4.8-2.2-6.6-7-7.5v-1c4.8-.9 6.4-2.7 7-7.5z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- ========== PRELOADER ========== -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Carregando Blessed Lawn &amp; Garden">
+    <div class="preloader__inner">
+      <svg class="preloader__logo" id="preloaderLogo" viewBox="0 0 236 64" aria-hidden="true">
+        <circle class="draw" cx="32" cy="32" r="29" pathLength="1"/>
+        <path class="draw" d="M32 50V28" pathLength="1"/>
+        <path class="draw draw--leaf" d="M32 40c-11 0-17-8-17-18 10 0 17 7 17 18z" pathLength="1"/>
+        <path class="draw draw--leaf" d="M32 30c0-11 7-17 18-17 0 11-7 17-18 17z" pathLength="1"/>
+        <path class="draw" d="M21 50h22" pathLength="1"/>
+        <text class="word" x="76" y="43">Blessed</text>
+      </svg>
+      <div class="preloader__count" aria-hidden="true"><span id="preloaderCount">0</span><small>%</small></div>
+    </div>
+    <div class="preloader__bar" aria-hidden="true"><span id="preloaderBar"></span></div>
+  </div>
+
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- Custom cursor (pointer devices only) -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label">Ver</span></div><div class="cursor__dot"></div></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand" aria-label="Blessed Lawn &amp; Garden — voltar ao topo">
+        <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="brand__text"><strong>Blessed</strong><small>Lawn &amp; Garden</small></span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#services">Serviços</a></li>
+          <li><a class="nav__link" href="#about">Sobre</a></li>
+          <li><a class="nav__link" href="#work">Nossos trabalhos</a></li>
+          <li><a class="nav__link" href="#reviews">Avaliações</a></li>
+        </ul>
+        <button class="btn btn--dark btn--sm" type="button" data-open-modal>Fale conosco</button>
+      </nav>
+
+      <button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Celular">
+      <a href="#services" class="mobile-menu__link"><span>01</span>Serviços</a>
+      <a href="#about" class="mobile-menu__link"><span>02</span>Sobre</a>
+      <a href="#work" class="mobile-menu__link"><span>03</span>Nossos trabalhos</a>
+      <a href="#reviews" class="mobile-menu__link"><span>04</span>Avaliações</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <button class="btn btn--green btn--lg btn--block" type="button" data-open-modal>Fale conosco <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <p><a href="tel:+14075550148">(407) 555-0148</a><br><a href="mailto:hello@blessedlawn.com">hello@blessedlawn.com</a></p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="container">
+        <div class="hero__top">
+          <div class="hero__aside" data-hero-reveal>
+            <span class="chip"><span class="chip__dot" aria-hidden="true"></span>Agenda de primavera aberta</span>
+            <p class="hero__aside-text">Cuidado de gramados e jardins, empresa familiar atendendo a Grande Orlando desde 2012.</p>
+          </div>
+
+          <h1 class="hero__title" id="heroTitle">
+            <span class="line"><span data-hero-line>Gramado falhado? Canteiros bagunçados?</span></span>
+            <span class="line"><span data-hero-line>A <span class="hl">Blessed</span> devolve a vida</span></span>
+            <span class="line"><span data-hero-line>ao seu quintal.</span></span>
+          </h1>
+        </div>
+
+        <div class="hero__row" data-hero-reveal>
+          <p class="hero__sub">Manutenção semanal de gramado, grama nova, canteiros limpos e reformas completas de quintal, tudo feito por uma única equipe de confiança para você ter seus fins de semana de volta.</p>
+          <div class="hero__ctas">
+            <button class="btn btn--green btn--lg" type="button" data-open-modal aria-label="Fale conosco para um orçamento grátis">Fale conosco <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <a class="btn btn--ghost btn--lg" href="#work">Veja nossos trabalhos</a>
+          </div>
+        </div>
+
+        <div class="hero__bento">
+          <figure class="hb hb--photo" data-hero-reveal>
+            <img src="assets/img/hero-backyard.jpg" alt="Quintal com gramado verde e exuberante, cercado por árvores e bordas plantadas" width="1400" height="933" fetchpriority="high">
+            <div class="hb__tags" aria-hidden="true"><span>Manutenção semanal</span><span>Grama</span><span>Canteiros</span></div>
+            <figcaption class="hb__tab">
+              <p>Quintal em Winter Park, antes da temporada de corte. Grama nova, bordas aparadas e plantio em 3 dias.</p>
+            </figcaption>
+          </figure>
+
+          <div class="hb hb--stat" data-hero-reveal>
+            <p class="hb__big"><span data-count="1200">0</span>+</p>
+            <p>quintais transformados nos condados de Orange e Seminole</p>
+            <div class="avatars" aria-hidden="true">
+              <img src="assets/img/person-01.jpg" alt="" width="40" height="40">
+              <img src="assets/img/person-04.jpg" alt="" width="40" height="40">
+              <img src="assets/img/person-03.jpg" alt="" width="40" height="40">
+              <span>+</span>
+            </div>
+          </div>
+
+          <button class="hb hb--dark" type="button" data-open-modal data-hero-reveal>
+            <span class="hb__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+            <span class="hb__label">Orçamento grátis<br>em 24 horas</span>
+            <span class="hb__small">Sem contrato. Sem pressão.</span>
+          </button>
+
+          <div class="hb hb--rating" data-hero-reveal>
+            <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <p class="hb__big hb__big--sm">4,9</p>
+            <p>em mais de 320 avaliações no Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Nossos serviços">
+        <div class="marquee__track">
+          <ul class="marquee__group">
+            <li>Corte e acabamento de grama</li><li class="marquee__img" aria-hidden="true"><img src="assets/img/svc-lawn.jpg" alt="" width="64" height="40"></li>
+            <li>Instalação de grama</li><li aria-hidden="true"><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+            <li>Projeto de canteiros</li><li class="marquee__img" aria-hidden="true"><img src="assets/img/svc-flowerbeds.jpg" alt="" width="64" height="40"></li>
+            <li>Manutenção de jardins</li><li aria-hidden="true"><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+            <li>Reforma de quintais</li><li class="marquee__img" aria-hidden="true"><img src="assets/img/svc-garden.jpg" alt="" width="64" height="40"></li>
+            <li>Novos canteiros</li><li aria-hidden="true"><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+          </ul>
+          <ul class="marquee__group" aria-hidden="true">
+            <li>Corte e acabamento de grama</li><li class="marquee__img"><img src="assets/img/svc-lawn.jpg" alt="" width="64" height="40"></li>
+            <li>Instalação de grama</li><li><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+            <li>Projeto de canteiros</li><li class="marquee__img"><img src="assets/img/svc-flowerbeds.jpg" alt="" width="64" height="40"></li>
+            <li>Manutenção de jardins</li><li><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+            <li>Reforma de quintais</li><li class="marquee__img"><img src="assets/img/svc-garden.jpg" alt="" width="64" height="40"></li>
+            <li>Novos canteiros</li><li><svg class="marquee__spark"><use href="#i-spark"/></svg></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section services" id="services" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="services__grid">
+          <div class="services__intro" data-reveal>
+            <span class="eyebrow">Nossos serviços</span>
+            <h2 class="h2" id="servicesTitle">Tudo o que seu quintal precisa, <em>uma equipe</em> em quem você pode confiar.</h2>
+            <p class="lead">De um corte semanal rápido a uma reforma completa do quintal: nós planejamos, executamos e mantemos tudo bonito.</p>
+          </div>
+
+          <article class="svc svc--lawn" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-lawn.jpg" alt="Close de um gramado verde, denso e recém-cortado" width="1000" height="667" loading="lazy">
+              <span class="svc__num">01</span>
+            </div>
+            <div class="svc__body">
+              <h3>Manutenção de gramado</h3>
+              <p>Corte semanal ou quinzenal, acabamento de bordas, aparo e limpeza com soprador, além de adubação sazonal para um verde denso e uniforme.</p>
+            </div>
+          </article>
+
+          <article class="svc svc--garden" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-garden.jpg" alt="Canteiros elevados de madeira cheios de plantas saudáveis" width="1000" height="667" loading="lazy">
+              <span class="svc__num">02</span>
+            </div>
+            <div class="svc__body">
+              <h3>Cuidado de jardins</h3>
+              <p>Poda, capina, cobertura com mulch e avaliação da saúde das plantas para manter seu jardim impecável o ano todo.</p>
+            </div>
+          </article>
+
+          <article class="svc svc--sod" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-sod.jpg" alt="Mãos preparando o solo para grama nova" width="1000" height="667" loading="lazy">
+              <span class="svc__num">03</span>
+            </div>
+            <div class="svc__body">
+              <h3>Plantio de grama</h3>
+              <p>Preparo do solo, nivelamento e grama em placas ou sementes aplicadas do jeito certo, para a grama nova enraizar rápido.</p>
+            </div>
+          </article>
+
+          <article class="svc svc--outdoor" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-outdoor.jpg" alt="Vista aérea de um deck reformado com área de descanso e vasos" width="1200" height="800" loading="lazy">
+              <span class="svc__num">04</span>
+            </div>
+            <div class="svc__body">
+              <h3>Transformação de áreas externas</h3>
+              <p>Redesenhamos quintais cansados e os transformamos em espaços que você realmente usa, com gramado novo, bordas, canteiros e projeto de plantio.</p>
+            </div>
+          </article>
+
+          <article class="svc svc--flower" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-flowerbeds.jpg" alt="Caminho de jardim ladeado por canteiros floridos e cercas vivas" width="1000" height="667" loading="lazy">
+              <span class="svc__num">05</span>
+            </div>
+            <div class="svc__body">
+              <h3>Manutenção de canteiros</h3>
+              <p>Bordas limpas, mulch novo e rotação sazonal de flores para canteiros que chamam atenção de quem passa na rua.</p>
+            </div>
+          </article>
+
+          <article class="svc svc--beds" data-reveal>
+            <div class="svc__media">
+              <img src="assets/img/svc-newbeds.jpg" alt="Jardineiro plantando uma nova fileira de mudas em solo preparado" width="1000" height="667" loading="lazy">
+              <span class="svc__num">06</span>
+            </div>
+            <div class="svc__body">
+              <h3>Novos canteiros</h3>
+              <p>Canteiros sob medida para o sol, o solo e o estilo da sua casa: modelados, delimitados, plantados e prontos para crescer.</p>
+            </div>
+          </article>
+
+          <div class="svc-note" data-reveal>
+            <p class="svc-note__title">Não sabe do que seu quintal precisa?</p>
+            <p>Visitamos seu imóvel, dizemos com sinceridade o que vale a pena fazer e enviamos um orçamento claro e fechado em até 24 horas.</p>
+            <button class="btn btn--dark" type="button" data-open-modal>Agende uma visita grátis <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about texture" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__story">
+            <span class="eyebrow" data-reveal>Sobre a Blessed</span>
+            <h2 class="h2" id="aboutTitle" data-reveal>Raízes na família. <em>Crescemos</em> com nossos vizinhos.</h2>
+            <div class="about__copy" data-reveal>
+              <p>A Blessed começou em 2012 com uma caminhonete, um cortador de grama e a promessa de tratar cada quintal como se fosse nosso. Daniel e Maria Reyes construíram o negócio rua por rua, principalmente com a indicação de vizinho para vizinho.</p>
+              <p>Hoje somos uma equipe de 24 pessoas, mas a promessa continua a mesma: chegar quando combinamos, fazer o trabalho certo da primeira vez e deixar cada imóvel mais limpo do que encontramos.</p>
+            </div>
+            <div class="about__media" data-reveal>
+              <img src="assets/img/about-hands.jpg" alt="Mãos com luvas segurando uma muda sobre terra fresca" width="1000" height="667" loading="lazy">
+              <div class="about__badge">
+                <svg aria-hidden="true"><use href="#logo-mark"/></svg>
+                <span><strong>Empresa familiar</strong>desde 2012</span>
+              </div>
+            </div>
+            <p class="about__sign" data-reveal>Daniel &amp; Maria Reyes <span>Fundadores</span></p>
+          </div>
+
+          <div class="about__diffs">
+            <p class="about__diffs-title" data-reveal>Por que os clientes continuam com a gente, ano após ano</p>
+            <ul class="diffs">
+              <li class="diff" data-reveal>
+                <span class="diff__icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span>
+                <div><h3>Licenciados e totalmente segurados</h3><p>Cada membro da equipe é treinado, tem antecedentes verificados e está coberto por seguro. Seu imóvel fica protegido.</p></div>
+              </li>
+              <li class="diff" data-reveal>
+                <span class="diff__icon" aria-hidden="true"><svg><use href="#i-crew"/></svg></span>
+                <div><h3>A mesma equipe em toda visita</h3><p>Pessoas que conhecem seu quintal, o código do seu portão e como você gosta das bordas.</p></div>
+              </li>
+              <li class="diff" data-reveal>
+                <span class="diff__icon" aria-hidden="true"><svg><use href="#i-tag"/></svg></span>
+                <div><h3>Preço fechado e transparente</h3><p>Um orçamento claro antes de começar. Sem taxas surpresa e sem contratos longos.</p></div>
+              </li>
+              <li class="diff" data-reveal>
+                <span class="diff__icon" aria-hidden="true"><svg><use href="#i-leaf"/></svg></span>
+                <div><h3>Produtos seguros para pets e crianças</h3><p>Adubos e tratamentos ecológicos, seguros para as pessoas e os animais que aproveitam seu gramado.</p></div>
+              </li>
+              <li class="diff" data-reveal>
+                <span class="diff__icon" aria-hidden="true"><svg><use href="#i-heart"/></svg></span>
+                <div><h3>Garantia de quintal feliz</h3><p>Não ficou satisfeito com uma visita? Avise em até 48 horas e voltamos para corrigir, sem custo.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <dl class="stats">
+          <div class="stat" data-reveal><dt>Anos cuidando de quintais da região</dt><dd><span data-count="12">0</span>+</dd></div>
+          <div class="stat stat--accent" data-reveal><dt>Projetos concluídos</dt><dd><span data-count="1200">0</span>+</dd></div>
+          <div class="stat" data-reveal><dt>Clientes que renovam a cada temporada</dt><dd><span data-count="98">0</span>%</dd></div>
+          <div class="stat" data-reveal><dt>Nota média no Google</dt><dd><span data-count="4.9" data-decimals="1">0</span><small>/5</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ========== PORTFOLIO ========== -->
+    <section class="section work" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head">
+          <div data-reveal>
+            <span class="eyebrow">Nossos trabalhos</span>
+            <h2 class="h2" id="workTitle">Quintais reais. Resultados <em>reais</em>.</h2>
+          </div>
+          <p class="lead section-head__aside" data-reveal>Alguns projetos recentes pela região de Orlando. Toque em qualquer foto para ver de perto.</p>
+        </div>
+
+        <ul class="gallery" id="gallery">
+          <li class="gallery__item g-1" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-01.jpg" data-caption="Renovação completa do gramado frontal · Winter Park, FL" aria-label="Abrir foto: Renovação completa do gramado frontal, Winter Park">
+              <img src="assets/img/work-01.jpg" alt="Casa clássica de dois andares com gramado frontal renovado e bem verde" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Gramado frontal renovado <small>Winter Park</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-2" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-02.jpg" data-caption="Gramado moderno e plantio de bordas · Lake Nona, FL" aria-label="Abrir foto: Gramado moderno e plantio de bordas, Lake Nona">
+              <img src="assets/img/work-02.jpg" alt="Casa moderna com gramado bem cuidado e bordas plantadas" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Bordas modernas <small>Lake Nona</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-3" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-03.jpg" data-caption="Caminho de jardim florido · Windermere, FL" aria-label="Abrir foto: Caminho de jardim florido, Windermere">
+              <img src="assets/img/work-03.jpg" alt="Caminho de jardim sob glicínias roxas floridas" width="1000" height="667" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Caminho do jardim <small>Windermere</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-4" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-04.jpg" data-caption="Gramado do quintal e cuidado de árvores · Dr. Phillips, FL" aria-label="Abrir foto: Gramado do quintal e cuidado de árvores, Dr. Phillips">
+              <img src="assets/img/work-04.jpg" alt="Casa contemporânea ao entardecer com gramado exuberante sob uma grande árvore" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Quintal ao entardecer <small>Dr. Phillips</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-5" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-05.jpg" data-caption="Restauração de jardim de sombra · Maitland, FL" aria-label="Abrir foto: Restauração de jardim de sombra, Maitland">
+              <img src="assets/img/work-05.jpg" alt="Jardim de sombra restaurado com samambaias, gramado e arbustos floridos" width="1200" height="800" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Jardim de sombra <small>Maitland</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-6" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-06.jpg" data-caption="Renovação da fachada · Baldwin Park, FL" aria-label="Abrir foto: Renovação da fachada, Baldwin Park">
+              <img src="assets/img/work-06.jpg" alt="Casa de tijolos vermelhos com gramado frontal bem aparado e árvores jovens" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Fachada renovada <small>Baldwin Park</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-7" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-07.jpg" data-caption="Paisagismo na área da piscina · Oviedo, FL" aria-label="Abrir foto: Paisagismo na área da piscina, Oviedo">
+              <img src="assets/img/work-07.jpg" alt="Casa branca com piscina, palmeiras e gramado com paisagismo" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Área da piscina <small>Oviedo</small></span>
+            </button>
+          </li>
+          <li class="gallery__item g-8" data-reveal>
+            <button type="button" class="gallery__btn" data-full="assets/img/work-08.jpg" data-caption="Novos canteiros de hortaliças e ervas · College Park, FL" aria-label="Abrir foto: Novos canteiros de hortaliças e ervas, College Park">
+              <img src="assets/img/work-08.jpg" alt="Mudas crescendo em fileiras de terra escura" width="1400" height="933" loading="lazy">
+              <span class="gallery__overlay" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span>
+              <span class="gallery__cap">Novos canteiros <small>College Park</small></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <div class="section-head section-head--reviews">
+          <div data-reveal>
+            <span class="eyebrow">Avaliações</span>
+            <h2 class="h2" id="reviewsTitle">Os vizinhos comentam. <em>Veja</em> o que eles dizem.</h2>
+          </div>
+          <div class="carousel-nav" data-reveal>
+            <button class="round-btn" type="button" id="revPrev" aria-label="Avaliação anterior"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+            <button class="round-btn" type="button" id="revNext" aria-label="Próxima avaliação"><svg aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </div>
+
+        <div class="reviews__track" id="reviewsTrack" tabindex="0" aria-label="Avaliações de clientes, role horizontalmente em telas pequenas">
+          <figure class="review" data-reveal>
+            <blockquote>Nosso gramado tinha mais mato do que grama. Seis semanas depois que a Blessed colocou grama nova e começou a manutenção semanal, os vizinhos passaram a perguntar quem tínhamos contratado.</blockquote>
+            <figcaption><img src="assets/img/person-01.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>Jennifer Walsh</strong>Proprietária, Winter Park</span></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <blockquote>Os mesmos dois rapazes toda terça, sempre pontuais, portão sempre fechado depois que saem. Não encosto num cortador de grama há dois anos e não sinto a menor falta.</blockquote>
+            <figcaption><img src="assets/img/person-02.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>Robert Haynes</strong>Aposentado, Lake Nona</span></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <blockquote>Transformaram um canto lamacento do nosso quintal em canteiros elevados de hortaliças que as crianças adoram. Orçamento claro, sem surpresas, pronto em dois dias.</blockquote>
+            <figcaption><img src="assets/img/person-03.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>Amanda Price</strong>Mãe de três, Oviedo</span></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <blockquote>Passamos as áreas comuns do nosso condomínio para a Blessed na primavera passada. Menos reclamações, fachada mais bonita e uma equipe que realmente atende o telefone.</blockquote>
+            <figcaption><img src="assets/img/person-04.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>Marcus Bell</strong>Conselho do condomínio, Baldwin Park</span></figcaption>
+          </figure>
+          <figure class="review" data-reveal>
+            <blockquote>A reforma do quintal valeu cada centavo: canteiros novos, gramado renovado, bordas limpas. Agora é onde passamos todas as noites.</blockquote>
+            <figcaption><img src="assets/img/person-05.jpg" alt="" width="64" height="64" loading="lazy"><span><strong>Daniel Ortiz</strong>Proprietário, Dr. Phillips</span></figcaption>
+          </figure>
+          <div class="review review--summary" data-reveal>
+            <svg class="review__g" aria-hidden="true"><use href="#i-google"/></svg>
+            <p class="review__score">4,9<small>/5</small></p>
+            <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <p>Média de mais de 320 avaliações verificadas no Google</p>
+          </div>
+        </div>
+
+        <div class="dots" id="reviewsDots" role="group" aria-label="Escolher avaliação"></div>
+      </div>
+    </section>
+
+    <!-- ========== FINAL CTA ========== -->
+    <section class="section cta-final" id="contact" aria-labelledby="ctaTitle">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-card__texture" aria-hidden="true"></div>
+          <div class="cta-card__main">
+            <span class="chip chip--light"><span class="chip__dot" aria-hidden="true"></span>Restam só 9 vagas de primavera este mês</span>
+            <h2 class="cta-card__title" id="ctaTitle">O quintal mais bonito da sua vida começa <span class="hl hl--light">esta semana.</span></h2>
+            <p class="cta-card__sub">Envie uma mensagem agora. Respondemos em até uma hora no horário comercial com um horário para seu orçamento grátis no local.</p>
+          </div>
+          <div class="cta-card__side">
+            <a class="btn btn--wa btn--xl" href="https://wa.me/14075550148?text=Ol%C3%A1%2C%20Blessed!%20Gostaria%20de%20um%20or%C3%A7amento%20gr%C3%A1tis%20para%20o%20meu%20quintal." target="_blank" rel="noopener" aria-label="Converse com a Blessed no WhatsApp (abre em nova aba)">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Chamar no WhatsApp
+            </a>
+            <button class="btn btn--outline-light btn--lg" type="button" data-open-modal>Ou envie seus dados</button>
+            <div class="cta-card__proof">
+              <div class="avatars avatars--light" aria-hidden="true">
+                <img src="assets/img/person-02.jpg" alt="" width="40" height="40" loading="lazy">
+                <img src="assets/img/person-03.jpg" alt="" width="40" height="40" loading="lazy">
+                <img src="assets/img/person-05.jpg" alt="" width="40" height="40" loading="lazy">
+              </div>
+              <p><strong>Mais de 1.200 quintais</strong> confiam em nós. Sem contrato, cancele quando quiser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" aria-labelledby="footerTitle">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__lead">
+          <a href="#top" class="brand brand--footer" aria-label="Blessed Lawn &amp; Garden — voltar ao topo">
+            <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+            <span class="brand__text"><strong>Blessed</strong><small>Lawn &amp; Garden</small></span>
+          </a>
+          <p class="footer__title" id="footerTitle">Vamos cultivar algo <em>lindo</em> juntos.</p>
+          <p class="footer__desc">Empresa familiar de cuidado de gramados, manutenção de jardins e transformação de áreas externas para casas e condomínios em toda a Grande Orlando.</p>
+          <button class="btn btn--green" type="button" data-open-modal>Fale conosco <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+
+        <nav class="footer__col" aria-label="Serviços">
+          <p class="footer__label">Serviços</p>
+          <ul>
+            <li><a href="#services">Manutenção de gramado</a></li>
+            <li><a href="#services">Cuidado de jardins</a></li>
+            <li><a href="#services">Instalação de grama</a></li>
+            <li><a href="#services">Canteiros de flores</a></li>
+            <li><a href="#services">Reforma de áreas externas</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Empresa">
+          <p class="footer__label">Empresa</p>
+          <ul>
+            <li><a href="#about">Sobre nós</a></li>
+            <li><a href="#work">Nossos trabalhos</a></li>
+            <li><a href="#reviews">Avaliações</a></li>
+            <li><a href="#contact">Orçamento grátis</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer__contact">
+          <p class="footer__label">Fale com a gente</p>
+          <a class="footer__contact-line" href="tel:+14075550148"><svg aria-hidden="true"><use href="#i-phone"/></svg>(407) 555-0148</a>
+          <a class="footer__contact-line" href="mailto:hello@blessedlawn.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>hello@blessedlawn.com</a>
+          <p class="footer__contact-line"><svg aria-hidden="true"><use href="#i-pin"/></svg>2450 Magnolia Ridge Rd, Ste 110<br>Orlando, FL 32803</p>
+          <p class="footer__contact-line"><svg aria-hidden="true"><use href="#i-clock"/></svg>Seg–Sáb · 7h–18h</p>
+          <ul class="socials" aria-label="Redes sociais">
+            <li><a href="#" aria-label="Blessed no Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a href="#" aria-label="Blessed no Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+            <li><a href="#" aria-label="Blessed no YouTube"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+            <li><a href="https://wa.me/14075550148" target="_blank" rel="noopener" aria-label="Blessed no WhatsApp (abre em nova aba)"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+          </ul>
+        </address>
+      </div>
+
+      <p class="footer__giant" aria-hidden="true">Blessed</p>
+
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Blessed Lawn &amp; Garden LLC. Todos os direitos reservados.</p>
+        <p>EIN 87-1234567 · Licenciada e segurada na Flórida</p>
+        <a href="#top" class="footer__top">Voltar ao topo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/14075550148?text=Ol%C3%A1%2C%20Blessed!%20Gostaria%20de%20um%20or%C3%A7amento%20gr%C3%A1tis." target="_blank" rel="noopener" aria-label="Converse com a gente no WhatsApp (abre em nova aba)">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-float__tip">Fale com a gente</span>
+  </a>
+
+  <!-- ========== CONTACT MODAL ========== -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" id="modalPanel">
+      <button class="modal__close round-btn" type="button" data-close-modal aria-label="Fechar formulário de contato"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+
+      <div class="modal__content" id="modalForm">
+        <span class="eyebrow modal__stagger">Orçamento grátis</span>
+        <h2 class="modal__title modal__stagger" id="modalTitle">Diga onde podemos falar com você.</h2>
+        <p class="modal__text modal__stagger">Retornamos em até uma hora útil para agendar sua visita grátis.</p>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="field modal__stagger">
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder=" " required minlength="2">
+            <label for="f-name">Nome completo</label>
+            <span class="field__error" id="f-name-err" aria-live="polite"></span>
+          </div>
+          <div class="field modal__stagger">
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder=" " required>
+            <label for="f-email">E-mail</label>
+            <span class="field__error" id="f-email-err" aria-live="polite"></span>
+          </div>
+          <div class="field modal__stagger">
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder=" " required>
+            <label for="f-phone">Telefone</label>
+            <span class="field__error" id="f-phone-err" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--green btn--lg btn--block modal__stagger" type="submit" id="submitBtn">
+            <span class="btn__label">Quero meu orçamento grátis</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form__note modal__stagger">Nada de spam. Usamos seus dados apenas para falar com você sobre o seu quintal.</p>
+        </form>
+      </div>
+
+      <div class="modal__success" id="modalSuccess" hidden>
+        <svg class="success-check" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" pathLength="1"/><path d="m20 33 8 8 16-17" pathLength="1"/></svg>
+        <h2 class="modal__title" tabindex="-1" id="successTitle">Obrigado! Já estamos cuidando disso.</h2>
+        <p class="modal__text">Alguém da nossa equipe vai entrar em contato em breve. Precisa de nós antes? Mande uma mensagem no WhatsApp.</p>
+        <a class="btn btn--wa" href="https://wa.me/14075550148" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Abrir WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de fotos dos projetos" aria-hidden="true">
+    <button class="lightbox__close round-btn round-btn--light" type="button" aria-label="Fechar visualizador de fotos"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button class="lightbox__nav lightbox__prev round-btn round-btn--light" type="button" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightboxImg" src="data:," alt="">
+      <figcaption class="lightbox__cap"><span id="lightboxCap"></span><span class="lightbox__count" id="lightboxCount"></span></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next round-btn round-btn--light" type="button" aria-label="Próxima foto"><svg aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

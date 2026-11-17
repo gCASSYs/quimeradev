@@ -1,0 +1,66 @@
+/* QuimeraDev: camada base de conversão (barra fixa no celular, mensagem do formulário) */
+.q-sticky{display:none}
+@media (max-width:768px){
+  .q-sticky{display:flex;align-items:center;justify-content:center;gap:10px;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;min-height:54px;padding:0 20px;border-radius:16px;background:var(--q-cta,#25D366);color:var(--q-cta-txt,#fff)!important;font:700 16px/1.1 system-ui,-apple-system,"Segoe UI",sans-serif;text-decoration:none!important;box-shadow:0 10px 30px rgba(0,0,0,.28);transform:translateY(150%);transition:transform .35s cubic-bezier(.19,1,.22,1)}
+  .q-sticky.on{transform:none}
+  .q-sticky svg{width:22px;height:22px;flex:none}
+  body{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){.q-sticky{transition:none}}
+.q-form-ok{margin:14px 0 0;padding:14px 16px;border-radius:12px;background:#eaf6d6;color:#1f2a0e;font:600 15px/1.45 system-ui,sans-serif}
+
+/* Vânia Silva: conversão e responsivo */
+:root{--q-cta:#34401b;--q-cta-txt:#fff}
+.banner .banner-conteudo h2{font-size:clamp(32px,calc(14px + 4.2vw),60px)!important;line-height:1.08!important;letter-spacing:-.01em;max-width:17ch;text-wrap:balance}
+.banner .banner-conteudo p{font-size:clamp(16px,calc(14px + .5vw),19px)!important;line-height:1.55!important;max-width:46ch}
+.banner-acoes{display:flex!important;flex-wrap:wrap;gap:12px;margin-top:24px}
+.banner .btn-banner{min-height:52px;display:inline-flex!important;align-items:center;justify-content:center;gap:10px;padding:0 26px!important;border-radius:999px!important;font-size:16px!important;font-weight:700!important;box-sizing:border-box;width:auto!important;margin:0!important;text-align:center}
+.banner .btn-banner-contato{background:#95b159!important;color:#1b2109!important;border:0!important}
+.banner .btn-banner-servicos{background:transparent!important;color:#fff!important;border:2px solid rgba(255,255,255,.75)!important}
+.banner .btn-banner svg{width:20px;height:20px}
+.banner-garantias{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;color:#eef3e2;font-size:14px;font-weight:600}
+.banner-garantias li{display:flex;align-items:center;gap:8px}
+.banner-garantias li::before{content:"";width:8px;height:8px;border-radius:50%;background:#95b159;flex:none}
+@media(max-width:560px){.banner .btn-banner{width:100%!important}}
+.dif-titulo h3{font-size:clamp(26px,calc(18px + 1.8vw),40px)!important;line-height:1.15!important;color:#34401b!important}
+.dif-titulo h2{font-size:clamp(16px,calc(14px + .4vw),19px)!important;line-height:1.5!important;font-weight:500!important}
+.dif-cards{display:grid!important;grid-template-columns:minmax(0,1fr);gap:16px;max-width:1100px;margin-inline:auto}
+@media(min-width:760px){.dif-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.dif-cards article{width:auto!important;max-width:none!important;margin:0!important;box-sizing:border-box}
+.dif-cards article p{font-size:15px!important;line-height:1.55!important}
+.parallax{min-height:0!important;height:auto!important;padding:64px 20px!important}
+.parallax h3{text-transform:none!important;letter-spacing:-.01em!important;font-size:clamp(26px,calc(12px + 2.6vw),44px)!important;line-height:1.15!important;max-width:22ch;margin-inline:auto!important}
+.ser-cards{display:grid!important;grid-template-columns:minmax(0,1fr);gap:20px;max-width:1200px;margin-inline:auto;box-sizing:border-box}
+@media(min-width:640px){.ser-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.ser-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ser-cards article::before{background:linear-gradient(180deg,rgba(28,35,12,.18) 0%,rgba(28,35,12,.72) 42%,rgba(28,35,12,.95) 100%)!important}
+.ser-cards article h5{font-size:21px!important;line-height:1.2!important}
+.ser-cards article p{font-size:15px!important;line-height:1.55!important;color:#f3f6ea!important}
+.ser-cards article a{min-height:44px;display:inline-flex!important;align-items:center;padding:0 20px!important;background:#95b159!important;color:#1b2109!important;border:0!important;border-radius:999px!important;font-weight:700!important;font-size:15px!important;text-decoration:none}
+.ava-cards{display:grid!important;grid-template-columns:minmax(0,1fr);gap:20px;max-width:1200px;margin-inline:auto;box-sizing:border-box}
+@media(min-width:900px){.ava-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.avaliações .ava-cards article{width:auto!important;max-width:none!important;margin:0!important;text-align:left!important;padding:28px!important;border-radius:22px!important;display:flex!important;flex-direction:column;gap:14px;box-sizing:border-box}
+.ava-cards article p{font-size:16px!important;line-height:1.6!important;text-align:left!important;margin:0!important}
+.ava-cards article h5{order:2;font-size:17px!important;text-align:left!important;margin:0!important}
+.ava-cards article > img{order:1}
+.ava-cards article .estrelas{order:0;justify-content:flex-start!important}
+.q-cta-band{background:#34401b;color:#fff;padding:clamp(56px,8vw,96px) 20px;text-align:center}
+.q-cta-band > div{max-width:720px;margin:0 auto;display:grid;gap:18px;justify-items:center}
+.q-cta-band h2{margin:0;font-size:clamp(28px,calc(14px + 2.8vw),46px);line-height:1.12;color:#fff;text-wrap:balance}
+.q-cta-band p{margin:0;font-size:clamp(16px,calc(14px + .4vw),19px);line-height:1.55;color:#e4ebd3}
+.q-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;background:#95b159;color:#1b2109!important;font-weight:700;font-size:17px;text-decoration:none!important}
+.q-btn svg{width:22px;height:22px}
+.for-campos input,.for-cards textarea,.for-cards input{font-size:16px!important}
+@media(max-width:768px){.btn-whatsapp{display:none!important}}
+.banner-garantias,.q-cta-band p,.q-btn,.q-sticky{font-family:var(--fonte-texto)!important}
+.q-cta-band h2{font-family:var(--fonte-titulo)!important;font-weight:600}
+.banner .banner-conteudo h2{max-width:20ch}
+.rodape-grid{box-sizing:border-box;padding-left:max(20px,4vw)!important;padding-right:max(20px,4vw)!important;gap:32px}
+.rodape-grid p{font-size:15px!important;line-height:1.6!important}
+/* rodada 2: elementos que vazavam no celular */
+.competencias,.fale-conosco,.servico-card,.servico-card-cta{box-sizing:border-box;max-width:100%}
+@media (max-width:1024px){.competencias{width:100%!important}}
+.servico-card-cta a{max-width:100%;box-sizing:border-box;white-space:normal;text-align:center}
+.rodape img,footer img{max-width:100%;height:auto}
+.fale-conosco a{max-width:100%;box-sizing:border-box;white-space:normal;text-align:center}
+.center img[src*="logo_inteira"]{width:min(300px,100%)!important;max-width:100%!important;height:auto!important}

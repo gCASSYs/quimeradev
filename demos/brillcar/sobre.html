@@ -39,7 +39,7 @@
      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
      <meta name="theme-color" content="#d9933d"> 
 
-    <title>BRILLCAR</title>
+    <title>BrillCar Estética Automotiva</title>
     <!-- o reset limpa os estilos do html então caso for colocar estilos, deixe ele em primeiro, pois se não ele limpa -->
     <link rel="stylesheet" href="css/reset.css">
 
@@ -51,9 +51,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsivo.css">
 <link rel="stylesheet" href="css/quimera-fix.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Serif:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap">
+<link rel="stylesheet" href="css/quimera-upgrade.css">
 </head>
 
-<body>
+<body data-marca="a BrillCar">
     
 
   <main id="inicio">
@@ -122,17 +124,18 @@
 </header>
 
     <div class="hero__texto">
-      <h1 class="hero__titulo">Excelência em Estética Automotiva</h1>
+      <h1 class="hero__titulo">Seu carro com brilho, proteção e cara de novo</h1>
+      <p class="q-hero-lead">Estética automotiva na Zona Leste de São Paulo: polimento, vitrificação, cristalização, revitalização e higienização com técnica profissional.</p>
 
-      <p class="hero__subtitulo">
+      <p class="hero__subtitulo"><span class="q-rot-label">Especialistas em</span>
         <span class="hero__rotator" aria-live="polite">
           <span id="heroPalavra" class="hero__palavra">Polimento</span>
         </span>
       </p>
 
       <div class="hero__botoes">
-        <a class="btn" href="orcamentos.html">ORÇAMENTO</a>
-        <a class="btn btn--secundario" href="servicos.html">SERVIÇOS</a>
+        <a class="btn" href="orcamentos.html">Pedir orçamento</a>
+        <a class="btn btn--secundario" href="servicos/servicosTotal.html">Ver serviços</a>
       </div>
     </div>
   </div>
@@ -148,7 +151,7 @@
 
     <div class="sobre__texto">
       <h2 class="titulo">BrillCar</h2>
-      <h3 class="subtitulo-destaque">O Brilho que Valoriza Seu Carro</h3>
+      <h3 class="subtitulo-destaque">O brilho que valoriza o seu carro</h3>
 
       <p class="texto">
         A BrillCar Estética Automotiva nasceu para transformar veículos comuns em experiências cuidadas de verdade.
@@ -194,8 +197,8 @@
     ﻿
 <section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
   <div class="container faixa-parallax__conteudo">
-    <h2 class="faixa-parallax__titulo">PARCEIROS</h2>
-    <p class="faixa-parallax__texto">Parceiros que elevam o padrão BrillCar</p>
+    <h2 class="faixa-parallax__titulo">Parceiros</h2>
+    <p class="faixa-parallax__texto">Marcas profissionais que usamos no dia a dia</p>
   </div>
 </section>
 
@@ -219,7 +222,7 @@
     <!-- INICIO AVALIACAO -->
     <section class="faixa-parallax" style="--img:url('assets/ImgParallax.png');">
   <div class="container faixa-parallax__conteudo">
-    <h2 class="faixa-parallax__titulo">AVALIAÇÃO</h2>
+    <h2 class="faixa-parallax__titulo">Avaliações</h2>
     <p class="faixa-parallax__texto">Juntos garantimos o melhor cuidado para o seu veículo</p>
   </div>
 </section>
@@ -411,7 +414,7 @@
     </nav>
 
     <div class="rodape__mapa">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0254648877017!2d-46.43443166057781!3d-23.495592259266648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63dda7be6fb9%3A0xa74e7d5a53104311!2sSenac%20S%C3%A3o%20Miguel%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1765397149603!5m2!1spt-BR!2sbr" title="Mapa de localização da BrillCar" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a class="q-mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Marechal+Tito,+6000+S%C3%A3o+Paulo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><span><strong>Como chegar</strong><small>Av. Marechal Tito, 6000 · Zona Leste de São Paulo</small></span></a>
     </div>
   </div>
 
@@ -424,5 +427,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
+<a class="q-sticky" href="orcamentos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Pedir orçamento</a>
+<script src="js/quimera-upgrade.js"></script>
 </body>
 </html>

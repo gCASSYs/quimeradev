@@ -46,7 +46,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#8b5e3c">
 
-    <title>CASA DO BARISTA</title>
+    <title>Casa do Barista | Cafeteria artesanal</title>
     <!-- o reset limpa os estilos do html então caso for colocar estilos, deixe ele em primeiro, pois se não ele limpa -->
     <link rel="stylesheet" href="css/reset.css">
 
@@ -63,9 +63,11 @@
 
 
 <link rel="stylesheet" href="css/quimera-fix.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="css/quimera-upgrade.css">
 </head>
 
-<body id="pg-contato">
+<body id="pg-contato" data-marca="a Casa do Barista">
     
     <!-- INICIO TOPO -->
         <header class="topo" id="topoFixo">
@@ -107,18 +109,25 @@
     <main>
         
         <!-- INICIO BANNER -->
+         <div class="q-hero">
          <section class="banner">
             <img src="assets/banner1.png" alt="Banner do site Casa do Barista">
             <img src="assets/banner2.png" alt="Banner do site Casa do Barista">
             <img src="assets/banner3.png" alt="Banner do site Casa do Barista">
         </section>
+          <div class="q-hero-txt q-hero-txt--curto"><div class="site">
+            <p class="q-hero-eyebrow">Contato</p>
+            <h2>Fale com a Casa do Barista</h2>
+            <p class="q-hero-lead">Tire dúvidas, faça uma reserva ou proponha uma parceria. Use o formulário ou fale direto pelo WhatsApp.</p>
+            <div class="q-hero-acoes"><a class="q-btn" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Chamar no WhatsApp</a><a class="q-btn q-btn--ghost" href="#formulario">Ir para o formulário</a></div>
+         </div></div>
+</div>
         <!-- FINAL BANNER -->  
          
         <!-- CONTEÚDO - CONTATO -->
          <section class="contato">
             <h2 class="contato-titulo">Casa do Barista</h2>
-            <h4>
-                            </h4>
+            
             <div class="site">
                 
                 <!-- texto -->
@@ -179,8 +188,8 @@
                 </div>
 
                 <!-- form -->
-                <div class="contato-form">
-                    <h2 class="form-titulo">Formulario de Contato</h2>
+                <div class="contato-form" id="formulario">
+                    <h2 class="form-titulo">Fale com a gente</h2>
                                         <form  method="POST" onsubmit="event.preventDefault();alert('Demonstração: o formulário funciona no site publicado.')">
                         <input type="hidden" name="csrf_token" value="ab26cf043bc6bda6d8d439587005c2f73bb0a10e2c90b4d0d8a58e684287d059">
                         <div class="contato-form-campo contato-form-campo-full">
@@ -220,9 +229,9 @@
          </section>
         
         <!-- MAPA CONTATO -->
-         <section class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0277219504574!2d-46.434433023790156!3d-23.495510959177935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63dda7be6fb9%3A0xa74e7d5a53104311!2sSenac%20S%C3%A3o%20Miguel%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1773078071380!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         </section>
+         <section class="map q-map"><div class="site">
+            <a class="q-mapa" href="https://www.google.com/maps/search/?api=1&query=Av+Marechal+Tito,+1500+S%C3%A3o+Miguel+Paulista" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><span><strong>Como chegar</strong><small>Av. Marechal Tito, 1500 · São Miguel Paulista</small></span></a>
+         </div></section>
     
     </main>
 
@@ -236,7 +245,7 @@
                     Av Marechal Tito, 1500<br>
                     São Miguel Paulista
                 </address>
-                <a href="#">Mapa</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Av+Marechal+Tito,+1500+S%C3%A3o+Miguel+Paulista" target="_blank" rel="noopener">Ver no mapa</a>
             </div>
 
             <div class="coluna-reserva">
@@ -255,7 +264,7 @@
                         <li><span>Feriado</span>   <span>16:00 - 02:00</span></li>
                     </ul> 
 
-                    <a href="#" class="btn"> Reserva</a>  
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="btn">Reservar pelo WhatsApp</a>  
                 </div>
 
                 <div class="box-email">
@@ -326,7 +335,8 @@
 
     <!-- MEU SCRIPT (ANIMAÇÃO) -->
     <script src="js/script.js"></script>
-
+<a class="q-sticky" href="https://wa.me/5511999999999" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.6 28.4l6.3-1.6A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M11.6 9.6c.4-.8.8-.9 1.2-.9h.9c.3 0 .6.1.8.6l1.1 2.6c.1.3.1.6-.1.8l-.8 1c-.2.2-.2.5 0 .8.9 1.5 2.1 2.7 3.6 3.5.3.2.6.1.8-.1l1-1.2c.2-.3.5-.3.8-.2l2.6 1.2c.3.1.5.4.5.7 0 .9-.4 2.2-1.6 2.8-1.1.6-2.6.6-4.5-.2-2.5-1-4.6-3.1-5.9-5.4-1-1.8-1.2-3.6-.4-5z" fill="currentColor"/></svg>Reservar mesa</a>
+<script src="js/quimera-upgrade.js"></script>
 </body>
 
 </html>

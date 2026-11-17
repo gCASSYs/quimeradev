@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" stroke="#1F5C3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Subtle background texture built from the logo leaves. Use at 0.04–0.08 opacity. -->
+  <g transform="translate(16 18)">
+    <path d="M24 34V16"/>
+    <path d="M24 26c-8 0-12-6-12-13 7 0 12 5 12 13z"/>
+    <path d="M24 19c0-8 5-12 13-12 0 8-5 12-13 12z"/>
+  </g>
+  <g transform="translate(96 96) rotate(24 24 20)">
+    <path d="M24 34V16"/>
+    <path d="M24 26c-8 0-12-6-12-13 7 0 12 5 12 13z"/>
+    <path d="M24 19c0-8 5-12 13-12 0 8-5 12-13 12z"/>
+  </g>
+  <circle cx="122" cy="34" r="3"/>
+  <circle cx="40" cy="122" r="3"/>
+</svg>
