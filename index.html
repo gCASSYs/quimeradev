@@ -11,6 +11,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
+[hidden]{display:none!important}
+html,body{margin:0}
+img{max-width:100%}
+
 /* Layout: narrativa reversa — do problema do cliente até a logo montada no ponto de contato.
    Seções alternam os fundos da marca: Abismo → faixa Brasa/Lima → Abismo → blocos Osso/Lima/Brasa → Osso → Abismo → Lima → Cinza → Brasa. */
 @property --p{syntax:'<number>';inherits:true;initial-value:1}
@@ -348,6 +352,14 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lima);outline
 .screen-in{width:100%;height:100%;border-radius:14px;overflow:hidden;border:1px solid var(--linha);background:#fff;transition:width .45s var(--ease-io)}
 .screen.mobile .screen-in{width:min(390px,100%);border-radius:28px;border:6px solid var(--cinza-2)}
 .screen iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+.screen-in{position:relative}
+.demo-load{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:14px;padding:24px;text-align:center;background:var(--abismo);color:var(--osso);font:500 15px/1.5 var(--sans);transition:opacity .3s ease}
+.demo-load[hidden]{display:none}
+.demo-load a{color:var(--lima);font-weight:700}
+.dl-spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--linha);border-top-color:var(--lima);animation:dlspin .8s linear infinite}
+@keyframes dlspin{to{transform:rotate(360deg)}}
+.demo-ext{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--borda);color:var(--osso);font:600 13px/1 var(--sans);text-decoration:none;white-space:nowrap}
+.demo-ext:hover{border-color:var(--lima);color:var(--lima)}
 @media(max-width:600px){.seg{display:none}}
 
 @media (prefers-reduced-motion:reduce){
@@ -592,9 +604,10 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lima);outline
       <button type="button" data-v="desk" aria-pressed="true">Computador</button>
       <button type="button" data-v="mobile" aria-pressed="false">Celular</button>
     </div>
+    <a class="demo-ext" id="demoExt" href="#" target="_blank" rel="noopener">Abrir site</a>
     <button class="close" type="button" id="demoClose" aria-label="Fechar demonstração">×</button>
   </div>
-  <div class="screen" id="screen"><div class="screen-in"><iframe id="demoFrame" title="Demonstração do site"></iframe></div></div>
+  <div class="screen" id="screen"><div class="screen-in"><iframe id="demoFrame" title="Demonstração do site"></iframe><div class="demo-load" id="demoLoad"><span class="dl-spin" aria-hidden="true"></span><p id="demoLoadTxt">Carregando o site…</p></div></div></div>
 </div>
 
 <script>
@@ -717,8 +730,12 @@ const demo=document.getElementById('demo'),frame=document.getElementById('demoFr
 function rectVars(r){demo.style.setProperty('--ct',r.top+'px');demo.style.setProperty('--cl',r.left+'px');demo.style.setProperty('--cr',(innerWidth-r.right)+'px');demo.style.setProperty('--cb',(innerHeight-r.bottom)+'px')}
 function zeroVars(){['--ct','--cl','--cr','--cb'].forEach(v=>demo.style.setProperty(v,'0px'))}
 function setView(v){screen.classList.toggle('mobile',v==='mobile');demo.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===v)))}
+const dLoad=document.getElementById('demoLoad'),dTxt=document.getElementById('demoLoadTxt');let dTimer=0;
+function showLoad(src){document.getElementById('demoExt').href=src;dLoad.hidden=false;dTxt.textContent='Carregando o site…';clearTimeout(dTimer);
+  dTimer=setTimeout(()=>{dTxt.innerHTML='Está demorando mais que o normal. <a href="'+src+'" target="_blank" rel="noopener">Abrir o site em nova aba</a>'},9000)}
+frame.addEventListener('load',()=>{if(frame.src&&frame.src!=='about:blank'&&!frame.src.endsWith('about:blank')){clearTimeout(dTimer);dLoad.hidden=true}});
 function openDemo(btn){lastBtn=btn;const card=btn.closest('.card'),mock=card.querySelector('.browser');
-  document.getElementById('demoTitle').textContent=card.dataset.title;frame.src=card.dataset.src;setView(innerWidth<600?'mobile':'desk');
+  document.getElementById('demoTitle').textContent=card.dataset.title;showLoad(card.dataset.src);frame.src=card.dataset.src;setView(innerWidth<600?'mobile':'desk');
   demo.hidden=false;document.body.style.overflow='hidden';root.classList.add('demo-open');
   if(!reduce){demo.classList.remove('anim-clip');rectVars(mock.getBoundingClientRect());void demo.offsetWidth;demo.classList.add('anim-clip');zeroVars()}else zeroVars();
   document.getElementById('demoClose').focus()}
