@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140" role="img" aria-label="Cabide vazio"><defs><radialGradient id="shine" cx="0.3" cy="0.2" r="0.6"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="soft" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+<ellipse cx="80" cy="132" rx="54" ry="6" fill="#000" opacity=".35" filter="url(#soft)"/>
+<path d="M80 34v-6a8 8 0 1 0-8-8" fill="none" stroke="#5A5A5A" stroke-width="4" stroke-linecap="round"/>
+<path d="M80 34 24 74a5 5 0 0 0 3 9h106a5 5 0 0 0 3-9Z" fill="none" stroke="#5A5A5A" stroke-width="4" stroke-linejoin="round"/>
+<path d="M36 90h88l-6 30H42Z" fill="none" stroke="#08E5C1" stroke-width="2.4" stroke-dasharray="5 6" stroke-linejoin="round" opacity=".8"/>
+<path d="M132 20l3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#FFDC68"/>
+</svg>

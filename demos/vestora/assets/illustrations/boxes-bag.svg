@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 204" width="240" height="204" role="img" aria-label="Caixas de envio com camiseta e sacola"><defs><radialGradient id="shine" cx="0.3" cy="0.2" r="0.6"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="soft" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="6"/></filter><linearGradient id="tee2" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#7DF5DF"/><stop offset="0.5" stop-color="#08D9B6"/><stop offset="1" stop-color="#05947D"/></linearGradient><linearGradient id="bagv" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#B79BFF"/><stop offset="0.55" stop-color="#8C5EF2"/><stop offset="1" stop-color="#5A33C4"/></linearGradient><linearGradient id="tagg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E6E1D8"/></linearGradient></defs>
+<ellipse cx="124" cy="190" rx="98" ry="9" fill="#000" opacity=".28" filter="url(#soft)"/>
+<g transform="translate(150 82) rotate(-8)">
+ <path d="M8 26h52l7 62a9 9 0 0 1-9 10H10a9 9 0 0 1-9-10Z" fill="url(#bagv)"/>
+ <path d="M8 26h52l7 62a9 9 0 0 1-9 10H10a9 9 0 0 1-9-10Z" fill="url(#shine)"/>
+ <path d="M22 36V20a12 12 0 0 1 24 0v16" fill="none" stroke="#4A27A6" stroke-width="5.5" stroke-linecap="round"/>
+ <path d="M26 58l8 13 8-13" fill="none" stroke="#E7DCFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+</g>
+<polygon points="104,186 34,151.0 34,89.0 104,124" fill="#C98F4E" stroke="#C98F4E" stroke-linejoin="round" stroke-width="7"/><polygon points="104,186 170,153.0 170,91.0 104,124" fill="#A9733A" stroke="#A9733A" stroke-linejoin="round" stroke-width="7"/><polygon points="104,124 34,89.0 100,56.0 170,91.0" fill="#E8B877" stroke="#E8B877" stroke-linejoin="round" stroke-width="7"/><polygon points="62.0,110.0 76.0,103.0 142.0,70.0 128.0,77.0" fill="#E9C389" opacity=".9"/><polygon points="62.0,110.0 76.0,103.0 76.0,121.0 62.0,128.0" fill="#E9C389" opacity=".75"/><polyline points="34,89.0 104,124 170,91.0" fill="none" stroke="#fff" stroke-width="2" opacity=".35" stroke-linejoin="round"/>
+<polygon points="100,104 54,81.0 54,43.0 100,66" fill="#D29A58" stroke="#D29A58" stroke-linejoin="round" stroke-width="7"/><polygon points="100,104 144,82.0 144,44.0 100,66" fill="#B07A40" stroke="#B07A40" stroke-linejoin="round" stroke-width="7"/><polygon points="100,66 54,43.0 98,21.0 144,44.0" fill="#EFC489" stroke="#EFC489" stroke-linejoin="round" stroke-width="7"/><polygon points="70.0,58.0 84.0,51.0 128.0,29.0 114.0,36.0" fill="#E9C389" opacity=".9"/><polygon points="70.0,58.0 84.0,51.0 84.0,69.0 70.0,76.0" fill="#E9C389" opacity=".75"/><polyline points="54,43.0 100,66 144,44.0" fill="none" stroke="#fff" stroke-width="2" opacity=".35" stroke-linejoin="round"/>
+<g transform="translate(58 30) rotate(-6)">
+ <path d="M14 18 30 8h28l16 10 8 18-14 6-4-8v32H24V34l-4 8-14-6Z" fill="url(#tee2)" stroke="#06B89A" stroke-width="2" stroke-linejoin="round"/>
+ <path d="M30 8c2 8 26 8 28 0" fill="none" stroke="#B8FFF0" stroke-width="3" stroke-linecap="round"/>
+ <path d="M24 34h40" stroke="#047A67" stroke-width="2" opacity=".5"/>
+ <path d="M14 18 30 8h28l16 10" fill="none" stroke="#fff" stroke-width="2" opacity=".35"/>
+</g>
+<g transform="translate(176 40) rotate(16)">
+ <path d="M0 6a6 6 0 0 1 6-6h22l12 14-12 14H6a6 6 0 0 1-6-6Z" fill="url(#tagg)"/>
+ <circle cx="30" cy="14" r="3" fill="#C9C2B4"/>
+ <path d="M7 10h14M7 17h9" stroke="#232323" stroke-width="2.4" stroke-linecap="round"/>
+</g>
+<path d="M200 22c-6 4-10 4-16 2" fill="none" stroke="#fff" stroke-width="1.6" opacity=".7"/>
+</svg>

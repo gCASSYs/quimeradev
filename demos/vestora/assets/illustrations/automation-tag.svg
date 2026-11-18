@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 162" width="180" height="162" role="img" aria-label="Etiqueta com raio representando automações"><defs><radialGradient id="shine" cx="0.3" cy="0.2" r="0.6"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><filter id="soft" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="6"/></filter><linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3A3A3A"/><stop offset="1" stop-color="#1E1E1E"/></linearGradient><linearGradient id="bl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF1B8"/><stop offset="0.45" stop-color="#FFC94A"/><stop offset="1" stop-color="#D88A0C"/></linearGradient><linearGradient id="tq" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7DF5DF"/><stop offset="1" stop-color="#05A88D"/></linearGradient></defs>
+<ellipse cx="92" cy="150" rx="62" ry="7" fill="#000" opacity=".35" filter="url(#soft)"/>
+<path d="M120 14c26 2 40 18 36 38" fill="none" stroke="#9B70FF" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+<g transform="rotate(-12 92 82)">
+<path d="M40 40a12 12 0 0 1 12-12h68l26 26v60a12 12 0 0 1-12 12H52a12 12 0 0 1-12-12Z" fill="url(#tg)" stroke="#444" stroke-width="1.5"/>
+<path d="M40 40a12 12 0 0 1 12-12h68l26 26v60a12 12 0 0 1-12 12H52a12 12 0 0 1-12-12Z" fill="url(#shine)" opacity=".35"/>
+<circle cx="126" cy="46" r="7" fill="#232323" stroke="#08E5C1" stroke-width="3"/>
+<path d="M96 46 72 84h20l-8 32 30-42H92l12-28Z" fill="url(#bl)"/>
+<path d="M96 46 72 84h20" fill="none" stroke="#fff" stroke-width="2" opacity=".6" stroke-linejoin="round"/>
+</g>
+<circle cx="150" cy="58" r="12" fill="url(#tq)"/><path d="m144 58 4 4 8-8" fill="none" stroke="#0B3B33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

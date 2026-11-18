@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2B2B"/><stop offset="1" stop-color="#1C1C1C"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".46" r=".5"><stop offset="0" stop-color="#8A5A33" stop-opacity=".22"/><stop offset="1" stop-color="#8A5A33" stop-opacity="0"/></radialGradient>
+<linearGradient id="fr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A17B5C"/><stop offset=".5" stop-color="#8A5A33"/><stop offset="1" stop-color="#5A3A21"/></linearGradient>
+<linearGradient id="ln" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5B4A7A"/><stop offset="1" stop-color="#2A2236"/></linearGradient>
+<filter id="blur" x="-30%" y="-200%" width="160%" height="500%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+<rect width="400" height="400" fill="url(#bg)"/><rect width="400" height="400" fill="url(#glow)"/>
+<ellipse cx="200" cy="300" rx="150" ry="12" fill="#000" opacity=".45" filter="url(#blur)"/>
+<path d="M78 196L40 168M322 196L360 168" stroke="#684426" stroke-width="10" stroke-linecap="round"/>
+<path d="M40 168L34 196M360 168L366 196" stroke="#53361F" stroke-width="9" stroke-linecap="round"/>
+<circle cx="132" cy="214" r="62" fill="url(#fr)"/><circle cx="268" cy="214" r="62" fill="url(#fr)"/>
+<circle cx="132" cy="214" r="48" fill="url(#ln)"/><circle cx="268" cy="214" r="48" fill="url(#ln)"/>
+<path d="M186 196C194 186 206 186 214 196" stroke="url(#fr)" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M104 186C112 176 124 172 136 172" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none" opacity=".55"/>
+<path d="M240 186C248 176 260 172 272 172" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none" opacity=".55"/>
+<path d="M150 252L172 230M286 252L308 230" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".18"/>
+<circle cx="84" cy="196" r="4" fill="#E9E1CF"/><circle cx="316" cy="196" r="4" fill="#E9E1CF"/>
+</svg>
