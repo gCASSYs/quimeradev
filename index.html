@@ -190,10 +190,10 @@ p{margin:0;text-wrap:pretty}
 @media(min-width:560px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1200px){.tool-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .tool{display:grid;gap:14px;align-content:start;padding:var(--pad);border:1.5px solid var(--abismo);border-radius:var(--r-lg);transition:background-color .25s ease,color .25s ease;min-width:0}
-.tool .ico{width:56px;height:56px;border-radius:var(--r-md);display:grid;place-items:center;background:var(--c);color:var(--abismo);margin-bottom:6px}
+.tool .ico{width:52px;height:52px;border-radius:var(--r-md);display:grid;place-items:center;background:var(--c);color:var(--abismo);margin-bottom:10px}
 .tool .ico svg{width:28px;height:28px}
-.tool h3{font-size:var(--fs-h3);line-height:1.1;letter-spacing:-.015em}
-.tool p{color:var(--mute);transition:color .25s ease}
+.tool h3{font-family:var(--sans);font-weight:800;font-size:clamp(20px,18px + .45vw,24px);line-height:1.2;letter-spacing:-.02em;padding:0;text-wrap:balance;overflow-wrap:break-word}
+.tool p{color:var(--mute);font-size:15.5px;line-height:1.6;margin:0;transition:color .25s ease}
 @media(hover:hover) and (pointer:fine){.tool:hover{background:var(--abismo);color:var(--osso)}.tool:hover p{color:var(--suave)}}
 .term{margin-top:clamp(40px,5vw,64px);background:var(--abismo);color:var(--osso);border-radius:var(--r-lg);overflow:hidden;max-width:1000px}
 .term-bar{display:flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-bottom:1px solid var(--linha)}
@@ -243,12 +243,12 @@ p{margin:0;text-wrap:pretty}
 .is-h .progress i{display:block;height:100%;background:var(--brasa);transform-origin:left;transform:scaleX(var(--pp,0))}
 
 /* como funciona */
-.steps{list-style:none;margin:0;padding:0;display:grid;position:relative}
-.steps::before,.steps::after{content:"";position:absolute;background:var(--abismo);left:27px;top:28px;bottom:68px;width:2px}
+.steps{list-style:none;margin:0;padding:0;display:grid;position:relative;isolation:isolate}
+.steps::before,.steps::after{content:"";position:absolute;z-index:0;background:var(--abismo);left:27px;top:28px;bottom:68px;width:2px}
 .steps::before{opacity:.2}
 .steps::after{transform-origin:50% 0;transform:scaleY(var(--p))}
 .steps li{--on:clamp(0,calc((var(--p) * 4 - var(--i)) * 1.6),1);position:relative;display:grid;gap:10px;padding:0 0 40px 80px}
-.num{position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;border:2px solid var(--abismo);background:var(--lima);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:24px}
+.num{position:absolute;z-index:2;left:0;top:0;width:56px;height:56px;border-radius:50%;border:2px solid var(--abismo);background:var(--lima);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:24px}
 .num::before{content:"";position:absolute;inset:-2px;border-radius:50%;background:var(--abismo);opacity:var(--on);transform:scale(calc(.5 + .5 * var(--on)))}
 .num span{grid-area:1/1;position:relative}
 .num .on{color:var(--lima);opacity:var(--on)}
@@ -268,7 +268,10 @@ p{margin:0;text-wrap:pretty}
 
 /* dúvidas */
 .faq-grid{display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
-@media(min-width:960px){.faq-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px}}
+.faq-grid{justify-items:center;text-align:center}
+.faq-grid .h2{margin-inline:auto}
+.faq-list{width:100%;max-width:880px;text-align:left}
+@media(min-width:960px){.faq-grid{gap:56px}}
 .faq-list{border-top:1px solid var(--linha);min-width:0}
 .qa{border-bottom:1px solid var(--linha)}
 .qa h3{font-size:inherit;margin:0}
@@ -329,6 +332,10 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lima);outline
 .foot{background:var(--abismo);padding-block:40px max(32px,env(safe-area-inset-bottom,0px));border-top:1px solid var(--linha)}
 .foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;color:var(--suave);font-size:14px}
 .foot .brand{color:var(--osso);padding-left:0}
+.to-top{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--lima);color:var(--abismo);text-decoration:none;transition:transform .2s var(--ease-out),background-color .15s ease}
+.to-top svg{width:22px;height:22px}
+.to-top:hover{transform:translateY(-3px);background:var(--osso)}
+.to-top:focus-visible{outline:2px solid var(--lima);outline-offset:3px}
 
 /* whatsapp flutuante */
 .wa-float{position:fixed;z-index:50;right:calc(env(safe-area-inset-right,0px) + 20px);bottom:calc(env(safe-area-inset-bottom,0px) + 20px);display:flex;align-items:center;gap:0;height:60px;padding:0 17px;border-radius:20px;background:var(--brasa);color:var(--abismo);text-decoration:none;font:700 15px/1 var(--sans);box-shadow:0 0 0 4px var(--abismo),0 0 0 6px var(--lima);transition:transform .3s var(--ease-out),opacity .2s ease,gap .25s var(--ease-out)}
@@ -558,7 +565,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lima);outline
       <div class="contact-copy">
         <h2 class="h2 fit" id="contato-t" data-split>O que toma o seu tempo?</h2>
         <p class="lead">Me conte uma tarefa que se repete na sua semana. A mensagem chega no meu WhatsApp e eu respondo com uma ideia de como resolver e as próximas perguntas para montar a sua proposta.</p>
-        <div class="wa-line"><a class="wa-inline" href="https://wa.me/5511910155831?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20QuimeraDev." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span id="waNum">(11) 91015-5831</span></a><button class="mini" type="button" id="copyNum">Copiar número</button></div>
+        <div class="wa-line"><a class="wa-inline" href="https://wa.me/5511910155831?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20QuimeraDev." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span id="waNum">(11) 91015-5831</span></a></div>
       </div>
       <div class="form-card">
         <form id="form" novalidate>
@@ -592,6 +599,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lima);outline
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="QuimeraDev, voltar ao início"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCI+PHRpdGxlPlF1aW1lcmFEZXYg4oCUIEJyYXNhPC90aXRsZT48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI4IiBmaWxsPSIjRkY1QTFGIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOSA1KSBzY2FsZSguODUpIj48cGF0aCBkPSJNNDUuMCAzMy4wIEw0NS40IDMwLjkgTDQ1LjUgMjguNyBMNDUuMyAyNi42IEw0NC45IDI0LjUgTDQ0LjMgMjIuNiBMNDMuNSAyMC43IEw0Mi41IDE5LjAgTDQxLjMgMTcuNCBMMzkuOSAxNi4wIEwzOC40IDE0LjcgTDM2LjggMTMuNyBMMzUuMSAxMi44IEwzMy4zIDEyLjIgTDMxLjUgMTEuOCBMMjkuNyAxMS42IEwyNy45IDExLjYgTDI2LjIgMTEuOCBMMjQuNSAxMi4yIEwyMi45IDEyLjggTDIxLjQgMTMuNiBMMjAuMCAxNC41IEwxOC43IDE1LjYgTDE3LjYgMTYuNyBMMTYuNyAxOC4wIEwxNS45IDE5LjQgTDE1LjMgMjAuOCBMMTQuOSAyMi4zIEwxNC42IDIzLjcgTDE0LjYgMjUuMiBMMTQuNyAyNi42IEwxNC45IDI4LjAgTDE1LjMgMjkuNCBMMTUuOSAzMC42IEwxNi42IDMxLjggTDE3LjQgMzIuOCBMMTguMyAzMy43IEwxOS4zIDM0LjUgTDIwLjMgMzUuMiBMMjEuNCAzNS43IEwyMi41IDM2LjEgTDIzLjcgMzYuMyBMMjQuOCAzNi40IEwyNS45IDM2LjQgTDI3LjAgMzYuMiBMMjguMCAzNi4wIEwyOS4wIDM1LjYgTDI5LjkgMzUuMSBMMzAuNyAzNC41IEwzMS40IDMzLjggTDMyLjAgMzMuMSBMMzIuNSAzMi40IEwzMi45IDMxLjUgTDMzLjIgMzAuNyBMMzMuNCAyOS45IEwzMy41IDI5LjEgTDMzLjUgMjguMyBMMzMuNCAyNy41IEwzMy4xIDI2LjggTDMyLjkgMjYuMSBMMzIuNSAyNS41IEwzMi4xIDI1LjAgTDMxLjYgMjQuNSBMMzEuMiAyNC4xIEwzMC42IDIzLjggTDMwLjEgMjMuNiBMMjkuNiAyMy40IEwyOS4wIDIzLjQgTDI4LjUgMjMuNCBMMjguMCAyMy40IEwyNy42IDIzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBDMEMxMiIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNNzUuMCAzMy4wIEw3NC42IDMwLjkgTDc0LjUgMjguNyBMNzQuNyAyNi42IEw3NS4xIDI0LjUgTDc1LjcgMjIuNiBMNzYuNSAyMC43IEw3Ny41IDE5LjAgTDc4LjcgMTcuNCBMODAuMSAxNi4wIEw4MS42IDE0LjcgTDgzLjIgMTMuNyBMODQuOSAxMi44IEw4Ni43IDEyLjIgTDg4LjUgMTEuOCBMOTAuMyAxMS42IEw5Mi4xIDExLjYgTDkzLjggMTEuOCBMOTUuNSAxMi4yIEw5Ny4xIDEyLjggTDk4LjYgMTMuNiBMMTAwLjAgMTQuNSBMMTAxLjMgMTUuNiBMMTAyLjQgMTYuNyBMMTAzLjMgMTguMCBMMTA0LjEgMTkuNCBMMTA0LjcgMjAuOCBMMTA1LjEgMjIuMyBMMTA1LjQgMjMuNyBMMTA1LjQgMjUuMiBMMTA1LjMgMjYuNiBMMTA1LjEgMjguMCBMMTA0LjcgMjkuNCBMMTA0LjEgMzAuNiBMMTAzLjQgMzEuOCBMMTAyLjYgMzIuOCBMMTAxLjcgMzMuNyBMMTAwLjcgMzQuNSBMOTkuNyAzNS4yIEw5OC42IDM1LjcgTDk3LjUgMzYuMSBMOTYuMyAzNi4zIEw5NS4yIDM2LjQgTDk0LjEgMzYuNCBMOTMuMCAzNi4yIEw5Mi4wIDM2LjAgTDkxLjAgMzUuNiBMOTAuMSAzNS4xIEw4OS4zIDM0LjUgTDg4LjYgMzMuOCBMODguMCAzMy4xIEw4Ny41IDMyLjQgTDg3LjEgMzEuNSBMODYuOCAzMC43IEw4Ni42IDI5LjkgTDg2LjUgMjkuMSBMODYuNSAyOC4zIEw4Ni42IDI3LjUgTDg2LjkgMjYuOCBMODcuMSAyNi4xIEw4Ny41IDI1LjUgTDg3LjkgMjUuMCBMODguNCAyNC41IEw4OC44IDI0LjEgTDg5LjQgMjMuOCBMODkuOSAyMy42IEw5MC40IDIzLjQgTDkxLjAgMjMuNCBMOTEuNSAyMy40IEw5Mi4wIDIzLjQgTDkyLjQgMjMuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMEMwQzEyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwb2x5Z29uIHBvaW50cz0iNTUuNywyOC44IDU4LjcsMjIuMCA2Mi4xLDIyLjEgNjQuOSwyOC44IDcxLjQsMzAuNCA3Ny4wLDI1LjYgODAuMSwyNy4xIDc5LjcsMzQuNSA4NC45LDM4LjcgOTIuMCwzNi44IDk0LjEsMzkuNSA5MC42LDQ1LjkgOTMuNCw1Mi4wIDEwMC42LDUzLjQgMTAxLjQsNTYuNyA5NS40LDYxLjAgOTUuMyw2Ny43IDEwMS4yLDcyLjEgMTAwLjQsNzUuNCA5My4yLDc2LjYgOTAuMiw4Mi42IDkzLjYsODkuMSA5MS41LDkxLjggODQuNCw4OS44IDc5LjIsOTMuOSA3OS40LDEwMS4yIDc2LjMsMTAyLjcgNzAuOCw5Ny44IDY0LjMsOTkuMiA2MS4zLDEwNi4wIDU3LjksMTA1LjkgNTUuMSw5OS4yIDQ4LjYsOTcuNiA0My4wLDEwMi40IDM5LjksMTAwLjkgNDAuMyw5My41IDM1LjEsODkuMyAyOC4wLDkxLjIgMjUuOSw4OC41IDI5LjQsODIuMSAyNi42LDc2LjAgMTkuNCw3NC42IDE4LjYsNzEuMyAyNC42LDY3LjAgMjQuNyw2MC4zIDE4LjgsNTUuOSAxOS42LDUyLjYgMjYuOCw1MS40IDI5LjgsNDUuNCAyNi40LDM4LjkgMjguNSwzNi4yIDM1LjYsMzguMiA0MC44LDM0LjEgNDAuNiwyNi44IDQzLjcsMjUuMyA0OS4yLDMwLjIiIGZpbGw9IiMwQzBDMTIiLz48cGF0aCBkPSJNNjAgMzggTDc5IDQ5IEw4MSA2OSBMNjggODUgTDUyIDg1IEwzOSA2OSBMNDEgNDkgWiIgZmlsbD0iI0ZGNUExRiIvPjxwYXRoIGQ9Ik00Ni41IDYwIEw1NSA2NC41IiBzdHJva2U9IiNGM0VGRTYiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTczLjUgNjAgTDY1IDY0LjUiIHN0cm9rZT0iI0YzRUZFNiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNNTUgNzIgTDY1IDcyIEw2MCA3OCBaIiBmaWxsPSIjMEMwQzEyIi8+PHBhdGggZD0iTTYwIDgwIFY5OCBNNjAgOTggTDUyIDEwNiBNNjAgOTggTDY4IDEwNiIgc3Ryb2tlPSIjRjNFRkU2IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iOTgiIHI9IjQiIGZpbGw9IiNGM0VGRTYiLz48Y2lyY2xlIGN4PSI1MSIgY3k9IjEwNyIgcj0iNSIgZmlsbD0iI0YzRUZFNiIvPjxjaXJjbGUgY3g9IjY5IiBjeT0iMTA3IiByPSI1IiBmaWxsPSIjRjNFRkU2Ii8+PC9nPjwvc3ZnPg==" alt="" width="34" height="34">Quimera<b>Dev</b></a>
     <span>© 2026 QuimeraDev. Nada de comum.</span>
+    <a class="to-top" href="#topo" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
   </div>
 </footer>
 
@@ -751,7 +759,7 @@ addEventListener('keydown',e=>{if(demo.hidden)return;if(e.key==='Escape')closeDe
 function copyText(txt,btn,el){const ok=()=>{const o=btn.textContent;btn.textContent='Copiado';setTimeout(()=>btn.textContent=o,1600)};
   const sel=()=>{if(!el)return;const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)};
   try{navigator.clipboard.writeText(txt).then(ok,sel)}catch(_){sel()}}
-document.getElementById('copyNum').addEventListener('click',e=>copyText('11910155831',e.currentTarget,document.getElementById('waNum')));
+
 
 /* formulário → WhatsApp */
 const form=document.getElementById('form'),status=document.getElementById('status');
